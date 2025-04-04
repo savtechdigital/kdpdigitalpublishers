@@ -90,19 +90,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* Payment Methods Section */}
-        <div className="border-t border-gray-800 pt-8 mt-8">
-          <h4 className="text-lg font-semibold mb-4">Payment Methods</h4>
-          <div className="grid grid-cols-4 md:grid-cols-7 lg:grid-cols-10 gap-4">
-            {/* Payment method icons would go here */}
-            {Array.from({ length: 10 }).map((_, index) => (
-              <div key={index} className="bg-gray-800 rounded-lg h-12 flex items-center justify-center">
-                {/* Replace with actual payment method icons */}
-                <span className="text-xs text-gray-400">Payment {index + 1}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+       
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
