@@ -21,6 +21,7 @@ function Header() {
             {/* <Link to="/services" className="text-white hover:text-blue-600">Services</Link> */}
             <ServicesDropdown />
             
+            <Link to="/testimonials" className="text-white hover:text-blue-600">Testimonials</Link>
             <Link to="/portfolio" className="text-white hover:text-blue-600">Portfolio</Link>
             <Link to="/about" className="text-white hover:text-blue-600">About Us</Link>
             <Link to="/contact" className="text-white hover:text-blue-600">Contact</Link>
@@ -34,7 +35,7 @@ function Header() {
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const ServicesDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,10 +21,10 @@ const ServicesDropdown = () => {
 
   return (
     <div className="relative" onMouseEnter={() => setIsOpen(true)} onMouseLeave={() => setIsOpen(false)}>
-      <button className="flex items-center space-x-2 text-white hover:text-orange-400 transition-colors">
+      <button className="flex items-center text-white hover:text-orange-400 transition-colors text-sm lg:text-base">
         <span>Services</span>
         <svg
-          className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-4 h-4 ml-1 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -33,17 +34,25 @@ const ServicesDropdown = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 mt-2 w-64 bg-orange-400 rounded shadow-lg py-1 z-50">
-          {services.map((service, index) => (
-            <Link
-              key={index}
-              to={service.path}
-              className="block px-4 py-2 text-black hover:bg-orange-500 transition-colors border-b border-orange-500 last:border-none"
-            >
-              {service.title}
-            </Link>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
+          className="absolute left-0 mt-2 w-56 bg-[rgba(10,10,10,0.95)] rounded-md shadow-lg overflow-hidden z-50"
+        >
+          <div className="py-1 max-h-[calc(100vh-120px)] overflow-y-auto">
+            {services.map((service, index) => (
+              <Link
+                key={index}
+                to={service.path}
+                className="block px-4 py-2 text-sm text-white hover:bg-orange-500 transition-colors"
+              >
+                {service.title}
+              </Link>
+            ))}
+          </div>
+        </motion.div>
       )}
     </div>
   );
