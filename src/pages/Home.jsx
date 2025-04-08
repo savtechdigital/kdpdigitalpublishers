@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Slider from "../components/slider/slider";
 import book from "../assets/images/3.webp";
 import Payment from "../components/payment/Payment";
-import bilboardvedio from "../assets/images/videos/bilboard.mp4";
+// import bilboardvedio from "../assets/images/videos/bilboard.mp4";
 import Filterbooks from './Filterbooks';
 import Calendly from "../components/calendly/Calendly";
 
@@ -14,52 +14,46 @@ function Home() {
     <div className="min-h-screen ">
       {/* Hero Section */}
       <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 1.2 }}
+        initial={{ opacity: 0.9 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
         style={{
-          backgroundImage: `url('/src/assets/ai3.jpg')`,
+          backgroundImage: `url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045732/ai-3_fcgdct.jpg')`,
         }}
         className="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50 bg-no-repeat bg-cover bg-center"
       >
         <div className="container mx-auto px-4 text-white">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl font-bold mb-6"
-            >
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="text-center">
+            <motion.h1 
+              initial={{ y: 5 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="text-5xl font-bold mb-6">
               Get Published Within 48 Hours*
             </motion.h1>
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-3xl mb-8"
-            >
+            <motion.h2 
+              initial={{ y: 5 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              className="text-3xl mb-8">
               Keep 100% Rights & Royalties
             </motion.h2>
+          
             <motion.button
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(0,0,0,0.2)" }}
               whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.4 }}
-              className="px-8 py-3 bg-black text-white text-lg font-semibold transition-all"
-            >
+              className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
+              >
               APPLY NOW!
             </motion.button>
             <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0.7 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               className="text-sm mt-4"
             >
               *Certain Restrictions apply, including acceptance of Client manuscript and subject material.
@@ -72,42 +66,33 @@ function Home() {
       {/* section slider */}
 
       <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.1 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0.9}}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
         className="py-2 mt-4 mb-8"
       >
         <div className="container mx-auto px-4 pt-6 md:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center lg:px-10">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6 lg:col-span-[7] lg:pr-10"
-            >
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-2xl md:text-3xl font-bold text-black mb-4"
-              >
-                Your Book's Journey to Bestsellerdom Starts with Us!
+            <motion.div 
+              initial={{ x: -5 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-6 lg:col-span-[7] lg:pr-10">
+              <motion.h2 
+                className="text-2xl md:text-3xl font-bold text-black mb-4">
+            Your Book's Journey to Bestsellerdom Starts with Us!
               </motion.h2>
               {[
                 "Kinetic Digital Publishers is your all-in-one partner for book success. From crafting mind-capturing narratives to dominating bestseller lists, KDP offers a wide-ranging suite of services to turn your manuscript into a publishing world's sensation.",
                 "Our expert team provides incomparable book social media marketing, content optimization, web design and development, Amazon optimization, book publishing, and all other services that authors need to fly high. Our primary goal is to ensure that your story reaches the right readers.",
                 "Let team KDP be the catalyst for literary victory! Our services include;"
               ].map((text, index) => (
-                <motion.p
+                <p
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="text-gray-700 text-sm lg:text-[15px]"
                 >
                   {text}
-                </motion.p>
+                </p>
               ))}
               <div className="grid grid-cols-2 gap-4 text-sm lg:text-[15px]">
                 {[
@@ -116,21 +101,15 @@ function Home() {
                   "Book Publishing Services",
                   "Author Website Design"
                 ].map((service, index) => (
-                  <motion.li
+                  <li
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
                     className="flex items-center text-gray-700"
                   >
-                    <motion.span
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
+                    <span
                       className="w-2 h-2 bg-orange-500 rounded-full mr-2"
-                    ></motion.span>
+                    ></span>
                     {service}
-                  </motion.li>
+                  </li>
                 ))}
               </div>
               <div className="flex gap-4 mt-6 flex-wrap">
@@ -140,9 +119,8 @@ function Home() {
                 ].map((btnText, index) => (
                   <motion.button
                     key={index}
-                    whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(0,0,0,0.2)" }}
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    transition={{ duration: 0.3 }}
                     className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
                   >
                     {btnText}
@@ -151,17 +129,14 @@ function Home() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="relative flex justify-center items-center lg:col-span-[5]"
-            >
+            <motion.div 
+              initial={{ x: 5 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="relative flex justify-center items-center lg:col-span-[5]">
               <motion.img
-                initial={{ scale: 0.9, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                whileHover={{ scale: 1.05, rotate: 2 }}
-                transition={{ duration: 0.5 }}
+                whileHover={{ scale: 1.05, rotate: 1 }}
+                transition={{ duration: 0.3 }}
                 src={book}
                 alt="Book Journey to Bestsellerdom"
                 className="w-full h-auto max-w-sm object-contain"
@@ -253,59 +228,164 @@ function Home() {
       </motion.section>
 
       {/* new sections */}
-      <section className="bg-white py-10 px-4 lg:py-20 lg:px-20">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7 }}
+        className="bg-white py-10 px-4 lg:py-20 lg:px-20"
+      >
         <div className="container mx-auto md:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Image Section */}
-            <div className="relative w-full h-full flex justify-center">
-              <img
-                src={book}
-                alt="Book Journey to Bestsellerdom"
-                className="w-3/4 max-h-[500px] object-contain"
-              />
-            </div>
+            <motion.div 
+              initial={{ opacity: 0, x: -50, rotateY: 15 }}
+              whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
+              transition={{ 
+                duration: 0.8, 
+                type: "spring", 
+                stiffness: 100 
+              }}
+              className="relative w-full h-full flex justify-center"
+            >
+              <motion.div  >
+                <motion.img
+                  whileHover={{ 
+                    scale: 1.05, 
+                    rotate: 2,
+                    transition: { duration: 0.4 }
+                  }}
+                  src={book}
+                  alt="Book Journey to Bestsellerdom"
+                  className="w-full max-h-[500px] object-contain"
+                />
+               
+              </motion.div>
+              
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.7 }}
+                className="absolute -bottom-4 -right-4 bg-orange-500 text-white p-3 md:p-4 rounded-full shadow-lg"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </motion.div>
+            </motion.div>
 
             {/* Text Section */}
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-                What is KDP?
-              </h2>
-              <p className="text-gray-700">
-                Kinetic Digital Publishers—Your Story, Amplified!
-              </p>
-              <p className="text-gray-700">
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, type: "spring" }}
+              className="space-y-6"
+            >
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="text-3xl md:text-4xl font-bold text-black mb-4"
+              >
+                <motion.span 
+                  initial={{ color: "#000" }}
+                  animate={{ color: "#f97316" }}
+                  transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+                >W</motion.span>hat is KDP?
+              </motion.h2>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-gray-700 border-l-4 border-orange-500 pl-3"
+              >
+                <motion.span
+                  initial={{ fontWeight: "normal" }}
+                  whileHover={{ fontWeight: "bold" }}
+                >Kinetic Digital Publishers</motion.span>—Your Story, Amplified!
+              </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-gray-700"
+              >
                 KDP is not just a publishing house; it is the author's
                 fictitious starting point. We believe that every story, no
                 matter how wild or whispered, deserves a chance to shine. At
                 Kinetic Digital Publishers, the team focuses on the power of
                 words to transform the lives of underrated authors.
-              </p>
-              <p className="text-gray-700">
+              </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-gray-700"
+              >
                 From the vision of an author to the applause of the readers,
                 we're the dedicated partners. Our team is trained to polish your
                 manuscript, design covers that attract, and market your book to
                 the world.
-              </p>
-              <p className="text-gray-700">
+              </motion.p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-gray-700"
+              >
                 Kinetic Digital Publishers is not just about publishing; it is
                 about empowering authors to find and maximize their hidden
                 potential. Let's write your success story by turning your
                 passion into a published reality!
-              </p>
+              </motion.p>
 
               {/* Buttons */}
-              <div className="flex gap-4 mt-6 flex-wrap">
-                <button className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex gap-4 mt-6 flex-wrap"
+              >
+                <motion.button 
+                  whileHover={{ 
+                    scale: 1.08, 
+                    boxShadow: "0px 5px 15px rgba(0,0,0,0.3)",
+                    backgroundColor: "#ea580c"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.4, delay: 0.6 }}
+                  className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
+                >
                   Get A Quote
-                </button>
-                <button className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-colors">
+                </motion.button>
+                <motion.button 
+                  whileHover={{ 
+                    scale: 1.08, 
+                    boxShadow: "0px 5px 15px rgba(0,0,0,0.3)",
+                    backgroundColor: "#ea580c"
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.4, delay: 0.7 }}
+                  className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
+                >
                   Live Chat
-                </button>
-              </div>
-            </div>
+                </motion.button>
+              </motion.div>
+
+              <motion.div
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="h-1 bg-gradient-to-r from-orange-500 to-transparent mt-4"
+              ></motion.div>
+            </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Billboard Marketing Section */}
       <motion.section
@@ -331,7 +411,7 @@ function Home() {
             >
               <video
                 className="w-full h-full object-cover rounded-2xl"
-                src={bilboardvedio}
+                src='https://res.cloudinary.com/dncqhipqk/video/upload/v1744043204/bilboard_peiuxm.mp4'
                 autoPlay
                 muted
                 loop
@@ -509,13 +589,13 @@ function Home() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="relative bg-white/20 rounded-lg p-6"
+              className="relative  rounded-lg p-6"
             >
-              <img
+              {/* <img
                 src="/src/assets/images/bookmarketing.png"
                 alt="Bookshelf Illustration"
                 className="w-full max-w-md mx-auto"
-              />
+              /> */}
             </motion.div>
 
             {/* Right side - Content */}

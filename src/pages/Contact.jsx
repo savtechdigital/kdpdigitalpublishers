@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-
+import Slider from '../components/slider/slider';
+import Calendly from '../components/calendly/Calendly';
+import Payment from '../components/payment/Payment';
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -23,7 +25,44 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
+    <div className="min-h-screen ">
+        <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.2 }}
+        style={{
+          backgroundImage: `url('/src/assets/images/testimonials.png')`,
+        }}
+        className="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50 bg-no-repeat bg-cover bg-center"
+      >
+        <div className="container mx-auto px-4 text-white">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-2xl  mb-6"
+            >
+            GET A QUOTE
+            </motion.h1>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl font-bold mb-8"
+            >
+           Contact Us
+            </motion.h2>
+          </motion.div>
+        </div>
+      </motion.section>
+      <Slider />
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -146,6 +185,8 @@ function Contact() {
           </div>
         </motion.div>
       </div>
+      <Calendly />
+      <Payment />
     </div>
   );
 }

@@ -1,52 +1,79 @@
 import { motion } from 'framer-motion';
+import Slider from '../components/slider/slider';
+import Filterbooks from './Filterbooks';
+import Calendly from '../components/calendly/Calendly';
+import Payment from '../components/payment/Payment';
+import Banner from '../components/bannersections/banner';
 
 function Portfolio() {
-  return (
-    <div className="min-h-screen pt-32 pb-20">
-      <div className="container mx-auto px-4">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold text-center mb-12"
-        >
-          Our Impressive Portfolio
-        </motion.h1>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.1,
+        when: "beforeChildren",
+        staggerChildren: 0.1
+      }
+    }
+  };
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((category, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="relative group cursor-pointer"
+  const childVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
+  return (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <motion.section
+        variants={childVariants}
+        style={{
+          backgroundImage: `url('/src/assets/images/testimonials.png')`,
+        }}
+        className="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50 bg-no-repeat bg-cover bg-center"
+      >
+        <div className="container mx-auto px-4 text-white">
+          <motion.div
+            variants={childVariants}
+            className="text-center"
+          >
+            <motion.h1
+              variants={childVariants}
+              className="text-2xl mb-6"
             >
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <h3 className="text-white text-xl font-semibold">{category}</h3>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+             Our Work
+            </motion.h1>
+            <motion.h2
+              variants={childVariants}
+              className="text-4xl font-bold mb-8"
+            >
+             Portfolio
+            </motion.h2>
+          </motion.div>
         </div>
-      </div>
-    </div>
+      </motion.section>
+      
+      <Slider />
+      
+      {/* bookfilter section */}
+      <Filterbooks />
+      
+      <Banner /> 
+      
+      {/* Calendly section */}
+      <Calendly />
+
+      <Payment />
+    </motion.div>
   );
 }
-
-const categories = [
-  "Religious",
-  "Fantasy",
-  "Children's Books",
-  "Cook Books",
-  "Autobiography",
-  "Fiction",
-  "Self Help",
-  "Politics",
-  "Animals",
-  "Psychology",
-  "Teacher's",
-  "Business"
-];
 
 export default Portfolio; 
