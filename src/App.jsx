@@ -14,6 +14,14 @@ import BookPublishing from './components/servicespage/BookPublishing';
 import BookMarketing from './components/servicespage/BookMarketing';
 import EbookPublishing from './components/servicespage/EbookPublishing';
 import Ghostwriting from './components/servicespage/Ghostwriting';
+import NotFound from './pages/NotFound';
+import Proofreading from './components/servicespage/Proofreading';
+import Formating from './components/servicespage/Formating';
+import BookCoverDesign from './components/servicespage/BookCoverDesign';
+import AudioBook from './components/servicespage/AudioBook';
+import Illustrations from './components/servicespage/Illustrations';
+import AuthorWebsite from './components/servicespage/AuthorWebsite';
+import VideoTrailer from './components/servicespage/VideoTrailer';
 
 function App() {
   return (
@@ -33,6 +41,14 @@ function App() {
             <Route path="/services/marketing" element={<BookMarketing />} />
             <Route path="/services/ebook-publishing" element={<EbookPublishing />} />
             <Route path="/services/ghost-writing" element={<Ghostwriting />} />
+            <Route path="/services/editing" element={<Proofreading />} />
+            <Route path="/services/formatting" element={<Formating />} />
+            <Route path="/services/cover-design" element={<BookCoverDesign />} />
+            <Route path="/services/audio-book" element={<AudioBook />} />
+            <Route path="/services/illustrations" element={<Illustrations />} />
+            <Route path="/services/author-website" element={<AuthorWebsite />} />
+            <Route path="/services/video-trailer" element={<VideoTrailer />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </MainLayout>
       </Router>

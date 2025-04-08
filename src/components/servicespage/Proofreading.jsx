@@ -6,14 +6,14 @@ import Payment from "../payment/Payment";
 import Calendly from "../calendly/Calendly";
 import ImageSlider from "../imageslider/ImageSlider";
 
-const Ghostwriting = () => {
+const Proofreading = () => {
   return (
     <>
       <section
         className="relative min-h-screen bg-cover bg-center overflow-hidden py-16 md:py-24"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744066685/Untitled_design_cuwfxh.jpg')",
+            "url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045722/about-us_jyik61.png')",
           backgroundColor: "rgba(0, 0, 0, 0.75)",
           backgroundBlendMode: "overlay",
           objectFit: "cover",
@@ -49,20 +49,17 @@ const Ghostwriting = () => {
                 ></motion.div>
 
                 <h3 className="text-xl md:text-xl font-medium mb-4 pl-4">
-                  Do you have a story to tell?
+                  Intriguing Manuscripts and Unforgettable Stories
                 </h3>
                 <h1 className="text-2xl md:text-3xl font-bold mb-8 leading-tight">
-                  Your <span className="text-orange-400">Story,</span> Our
-                  Words, and the Rest Will Be History
+                  Professional <span className="text-orange-400">Editing</span>{" "}
+                  & Proofreading to Perfect Your Words
                 </h1>
                 <p className="text-md md:text-md mb-10 text-gray-200 leading-relaxed">
-                  At Kinetic Digital Publishers, every story matters. We’ve
-                  brought together a team of talented writers from around the
-                  world who know how to make your words come alive. No matter
-                  whether it’s through eBooks, memoirs, or business insights.
-                  From ghostwriters to seasoned authors, we’re here to help you
-                  shape stories that truly connect with your audience and leave
-                  a lasting impact.
+                  From thorough manuscript editing to meticulous proofreading,
+                  KDP ensures every sentence shines. Our expert team will take
+                  charge of your draft, fine-tuning every detail to turn it into
+                  a polished masterpiece.
                 </p>
                 <div className="flex flex-wrap gap-6 mt-10">
                   <motion.button
@@ -123,7 +120,7 @@ const Ghostwriting = () => {
                     rotate: 2,
                     transition: { duration: 0.4 },
                   }}
-                  src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045717/5_dpzaks.png"
+                  src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744043437/10_k9fvfj.png"
                   loading="lazy"
                   alt="Book Journey to Bestsellerdom"
                   className="w-full max-h-[500px] object-contain"
@@ -175,9 +172,9 @@ const Ghostwriting = () => {
                     repeatType: "reverse",
                   }}
                 >
-                  W
+                  E
                 </motion.span>
-                hat is Ghostwriting?{" "}
+                diting & Proofreading Made Seamless{" "}
               </motion.h2>
 
               <motion.p
@@ -186,35 +183,33 @@ const Ghostwriting = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-gray-700"
               >
-                Ghostwriting means writing in someone else's voice and bringing
-                their ideas and emotions to life. It can be any engaging
-                content, books, or any other form of writing. The ghost writes
-                on behalf of someone else in the name of the writer. It's like a
-                collaboration in which your ideas, voice, and vision take the
-                spotlight as a professional writer crafts them into beautiful
-                words.
+                Many authors confuse editing and proofreading, but each plays a
+                distinct role in refining your manuscript.
               </motion.p>
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-2xl md:text-2xl font-bold text-black mb-2"
-              >
-                How Ghostwriters Bring Your Vision to Life
-              </motion.h2>
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-gray-700"
               >
-                With the help of ghostwriting, your ideas will make perfect
-                content. A good ghostwriter has the expertise to turn your story
-                into a professional piece that feels authentically yours. From
-                research to revisions, they do it all. This way, you get the
-                free time to focus on other things. A ghostwriter will help you
-                write the content in such a manner that relates to your audience
-                and brings your ideas to life within a blink.
+                Editing is all about the quality of your work. It focuses on
+                improving the content, structure, flow, and coherence of your
+                writing. Professional editors analyze every sentence, ensuring
+                that every word is in the right place and that your message is
+                clear and impactful. It's like giving your manuscript a complete
+                makeover.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-gray-700"
+              >
+                Proofreading, on the other hand, is the final polish. It’s about
+                catching the small details—correcting grammatical errors, fixing
+                punctuation, and addressing formatting issues. Proofreading
+                ensures your work is flawless and ready for the world to see.
               </motion.p>
 
               {/* Buttons */}
@@ -285,96 +280,16 @@ const Ghostwriting = () => {
               className="md:w-2/5"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Why Hire a Ghostwriter?
+                Every Word Has to Find Its Perfect Place
               </h2>
 
               <p className="text-gray-700 mb-6">
-                Hiring a quality ghostwriter can play a major role in bringing
-                your ideas to life. Are you an aspiring novelist or someone who
-                wants to tell a story but never gets time to sit and write it
-                down? The ghost takes your ideas, voice, and vision and delivers
-                them as a complete package. A ghostwriter will definitely bring
-                knowledge and insight to your project. This is why a lot of
-                people go this route.
+                When editing and proofreading work together, they ensure your
+                manuscript isn’t just good—it’s exceptional. Whether you're a
+                first-time writer or an experienced author, understanding the
+                difference between these services is essential to presenting the
+                very best of your work.
               </p>
-              <p className="text-gray-700 mb-6">
-                The benefits of ghostwriting are:
-              </p>
-
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Time-Saving Expertise:
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
-                    <span>
-                      {" "}
-                      Ghostwriters take care of research, writing, and editing.
-                      It leaves you with the time to indulge in what really
-                      interests you.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Professional Quality:{" "}
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
-                    <span>
-                      A ghostwriter gets your story polished and presents it in
-                      such a way goes beyond the standards of the industry.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Customized Voice:{" "}
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
-                    <span>
-                      They represent your unique tone and perspective to ensure
-                      the content feels as if you produced it.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Confidentiality Guaranteed:{" "}
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
-                    <span>
-                      You get the full credit of your work hile the
-                      confidentiality is maintained. This way, an author gets
-                      all the benefits of a ghostwriter.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Wide Range of Genres and Styles:{" "}
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
-                    <span>
-                      Ghostwriters have their niches. They can write anything
-                      from business books to fictions.
-                    </span>
-                  </li>
-                </ul>
-              </div>
 
               <div className="flex flex-wrap gap-4">
                 <motion.button
@@ -400,10 +315,9 @@ const Ghostwriting = () => {
                   rotate: 2,
                   transition: { duration: 0.4 },
                 }}
-                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045719/6_vux4cj.png"
+                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744043438/11_dl2z7b.png"
                 alt="Book Journey to Bestsellerdom"
-                className="w-full max-h-[500px] object-contain rounded-xl"
-                loading="lazy"
+                className="w-full max-h-[500px] object-contain"
               />
             </motion.div>
           </div>
@@ -435,44 +349,31 @@ const Ghostwriting = () => {
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-4xl font-bold mb-4 text-white"
             >
-              Tips for Selecting the Right Ghostwriter for Your Story{" "}
+              Why Authors Need Professional Editing{" "}
             </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-white text-base md:text-md"
-            >
-              Here are some tips to help you make that perfect selection:
-            </motion.p>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Experience in Your Genre",
+                title: "Boosts Quality",
                 content:
-                  "When hiring a ghostwriter, find someone who knows your genre best. No matter whether it is fiction, memoir, business, or technical writing. Their knowledge of that genre will allow them to capture the essence of your story.",
+                  "A manuscript edited by a professional is error-free and flows smoothly. It ensures your message resonates with readers, turning a good book into a great one.",
               },
               {
-                title: "Portfolio and Writing Style",
+                title: "Enhances Credibility",
                 content:
-                  "Check out their portfolio to see their writing style. Ensure that it is similar to the way you want to tell your story. This way, the audience can relate to your ideas.",
+                  "Readers are quick to notice mistakes, and even small errors can damage your reputation. Professional editing and proofreading safeguard your credibility by presenting a polished, flawless manuscript.",
               },
               {
-                title: "Client Testimonials",
+                title: "Prepares for Publishing",
                 content:
-                  "Read the reviews regarding the work they did for previous clients. This way, you can see how they operate in terms of professionalism as well as the quality of writing.",
+                  "Whether you're self-publishing or aiming for a traditional route, a professionally edited manuscript stands out. Editing and proofreading ensure your work meets industry standards, whether you're in Dallas or anywhere else.",
               },
               {
-                title: "Collaborative Process",
+                title: "Refines Your Unique Voice",
                 content:
-                  "A good ghostwriter should be collaborative. They will listen to your comments and corrections rather than make you feel like you're spending hours trying to make someone understand how an already-written story must be changed.",
-              },
-              {
-                title: "Understand Your Vision",
-                content:
-                  "Have a conversation to ensure that the ghostwriter has grasped the target goals as well as the message you'd like to get across. They should be able to capture the reflection of your vision & audience.",
+                  "Professional editing enhances your writing while preserving your unique voice. Editors fine-tune your work without compromising your authenticity, making your story unforgettable for readers.",
               },
             ].map((service, index) => (
               <motion.div
@@ -533,9 +434,8 @@ const Ghostwriting = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-             
               <h2 className="text-3xl md:text-4xl font-bold mb-6  text-orange-500 ">
-                The Timeline Under a Professional Ghostwriter
+                Types of Editing Services We Offer
               </h2>
               <div className="w-[calc(100%-250px)] h-1 bg-orange-500 mx-auto mb-8"></div>
             </motion.div>
@@ -550,7 +450,7 @@ const Ghostwriting = () => {
               className="order-2 md:order-1"
             >
               <img
-                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045720/8_di1jw0.png"
+                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744043440/12_szntvx.png"
                 alt="Children reading a book"
                 className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
                 loading="lazy"
@@ -572,8 +472,8 @@ const Ghostwriting = () => {
                 className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-orange-500"
               >
                 <div className="flex items-start">
-                  <div className="bg-orange-500 text-white rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg
+                  <div className="bg-orange-500 text-white rounded-full p-2 mr-4 flex-shrink-0 w-[30px] h-[30px]">
+                    {/* <svg
                       className="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
@@ -586,17 +486,18 @@ const Ghostwriting = () => {
                         strokeWidth="2"
                         d="M6 18L18 6M6 6l12 12"
                       ></path>
-                    </svg>
+                    </svg> */}
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      First Consultation
+                      Developmental Editing
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      The first step is in-depth conversation where you share
-                      the vision and purpose for your project. This is the stage
-                      where the ghostwriter understands your ideas and
-                      expectations.
+                      Developmental editing focuses on the big picture. From
+                      character development to the overall flow of the
+                      narrative, it ensures that your story is engaging from
+                      start to finish. It’s all about strengthening the
+                      structure and emotional impact of your manuscript.
                     </p>
                   </div>
                 </div>
@@ -628,13 +529,13 @@ const Ghostwriting = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Planning and Outlining
+                      Line Editing
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      After understanding your objectives, they design a
-                      comprehensive outline for your project. This blueprint
-                      goes in the direction of the writing process to reinforce
-                      the vision in your head.
+                      Line editing dives into every sentence of your manuscript.
+                      It enhances word choice, improves readability, and ensures
+                      your unique voice shines through, all while refining the
+                      clarity and flow of each line.
                     </p>
                   </div>
                 </div>
@@ -666,13 +567,14 @@ const Ghostwriting = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Writing and Drafting
+                      Copy Editing
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      The ghostwriter gets down to crafting your story, keeping
-                      your tone, style, and key messages intact. This way,
-                      they're able to bring your ideas to life in the first
-                      draft of your manuscript or content.
+                      Copy editing is all about the details. It focuses on
+                      grammar, punctuation, and consistency, ensuring that your
+                      manuscript is precise and error-free. This step bridges
+                      the gap between creative storytelling and polished,
+                      professional writing.
                     </p>
                   </div>
                 </div>
@@ -702,9 +604,8 @@ const Ghostwriting = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              
               <h2 className="text-3xl md:text-4xl font-bold mb-6  text-orange-500 ">
-                How to Choose the Perfect Ghostwriting Service
+                Proofreading Process That Makes Your Book Shine
               </h2>
               <div className="w-[calc(100%-250px)] h-1 bg-orange-500 mx-auto mb-8"></div>
             </motion.div>
@@ -719,7 +620,7 @@ const Ghostwriting = () => {
               className="order-2 md:order-1"
             >
               <img
-                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045720/7_ncmpku.png"
+                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045718/4_tvwsui.png"
                 alt="Children reading a book"
                 className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
                 loading="lazy"
@@ -759,13 +660,13 @@ const Ghostwriting = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Check Their Area of Expertise:
+                      Meticulous Review
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      A ghostwriter's portfolio and client reviews speaks
-                      volumes about their skills. Make sure that your writer has
-                      experience in your area of work. This way, you can ensure
-                      high-quality results.
+                      Proofreaders carefully go through your entire manuscript,
+                      catching spelling mistakes, grammatical errors, and other
+                      inconsistencies. Their attention to detail ensures your
+                      text is flawless.
                     </p>
                   </div>
                 </div>
@@ -797,12 +698,13 @@ const Ghostwriting = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Price versus Value:
+                      Formatting Check
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      Ghostwriting fees depend on the details of a project, its
-                      duration, and the writer's level of experience. Although
-                      generally, top ghostwriters might be expensive.
+                      Proofreading goes beyond just checking for typos. It also
+                      ensures your manuscript meets proper formatting
+                      standards—correct margins, consistent fonts, and uniform
+                      layout—so your book looks as polished as it reads.
                     </p>
                   </div>
                 </div>
@@ -834,15 +736,13 @@ const Ghostwriting = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Communication and Collaboration:
+                      Final Polish
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      A good ghostwriter should be approachable, responsive, and
-                      open to collaboration. It's essential to have clear
-                      communication throughout the project to ensure your ideas
-                      and vision are accurately represented. A writer who
-                      listens and adapts to your feedback will deliver better
-                      results.
+                      Before your book heads to print or digital platforms, the
+                      proofreader gives it one last look. This final step
+                      ensures your manuscript is 100% error-free and ready for
+                      release.
                     </p>
                   </div>
                 </div>
@@ -857,16 +757,15 @@ const Ghostwriting = () => {
             className="text-center mt-16 w-full"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Conclusion
+              Are You Planning to Get Professional Editing & Proofreading
+              Services?
             </h3>
             <p className="text-gray-600 max-w-5xl text-sm mx-auto mb-8">
-              Telling your story should not be an issue if you're not a great
-              writer. With the help of a good ghostwriter, you would be able to
-              change all about it. If you are constantly searching for a
-              "ghostwriter near me" or a “ghostwriter in Dallas,” then your
-              search has brought you to the right place. Whether local or
-              worldwide, our experienced ghostwriters will serve your needs with
-              very well-tailored experiences.
+              Your manuscript deserves expert attention. Whether it's
+              comprehensive manuscript editing or detailed book proofreading
+              services, KDP has you covered. Our professional team ensures your
+              words leave a lasting impact and your book is polished to
+              perfection.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -904,6 +803,137 @@ const Ghostwriting = () => {
           </motion.div>
         </div>
       </motion.section>
+      {/* ////////////////////////////////////////////////////////// */}
+      {/* /////////////////////////////////////////////// */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7 }}
+        className="py-16 md:py-24 bg-gray-50"
+      >
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl mx-auto">
+            {/* Left side - Image */}
+
+            {/* Right side - Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="md:w-2/5"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Turning Mistakes Into Masterpieces
+              </h2>
+
+              <p className="text-gray-700 mb-6">
+                Even the most experienced authors can overlook critical details
+                in their work. Common errors like typos and inconsistencies can
+                affect your story’s flow and impact. Professional editing and
+                proofreading tackle these pitfalls, polishing your manuscript to
+                perfection.
+              </p>
+              <p className="text-gray-700 mb-6">
+                Typos and grammatical errors that disrupt the reader’s
+                experience.
+              </p>
+              <p className="text-gray-700 mb-6">
+                Inconsistent character names, timelines, or plot points.
+              </p>
+              <p className="text-gray-700 mb-6">
+                Overuse of filler words that dilute your message.
+              </p>
+              <p className="text-gray-700 mb-6">
+                Awkward phrasing or unclear sentences that confuse readers.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-6 py-3 bg-orange-500 text-white font-medium rounded-md hover:bg-orange-600 transition-all"
+                >
+                  Get A Quote
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-6 py-3 bg-white border border-orange-500 text-orange-500 font-medium rounded-md hover:bg-orange-50 transition-all"
+                >
+                  Live Chat
+                </motion.button>
+              </div>
+            </motion.div>
+            <motion.div>
+              <motion.img
+                whileHover={{
+                  scale: 1.05,
+                  rotate: 2,
+                  transition: { duration: 0.4 },
+                }}
+                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744043443/14_r5flbw.png"
+                alt="Book Journey to Bestsellerdom"
+                className="w-full max-h-[500px] object-contain"
+              />
+            </motion.div>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-center mt-16 w-full"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Conclusion
+            </h3>
+            <p className="text-gray-600 max-w-5xl text-sm mx-auto mb-8">
+              Kinetic Digital Publishers (KDP) offers more than just editing
+              services—we’re here to be your creative partners. Our experienced
+              team specializes in manuscript editing and book proofreading,
+              ensuring your work is polished and ready for success. Whatever
+              your genre, reach out to us and let us help you get your
+              manuscript published with professionalism and care.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 5px 15px rgba(249, 115, 22, 0.4)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-all"
+              >
+                Call Us +1 (855) 248-0007
+              </motion.button>
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 5px 15px rgba(107, 114, 128, 0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all"
+              >
+                Live Chat
+              </motion.button>
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0px 5px 15px rgba(249, 115, 22, 0.4)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-all"
+              >
+                Get A Quote
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </motion.section>
+      {/* /////////////////////////////////////////////// */}
+
+     
       {/* ///////////////////////////////////////////////////// */}
       <Calendly />
       <Payment />
@@ -911,4 +941,4 @@ const Ghostwriting = () => {
   );
 };
 
-export default Ghostwriting;
+export default Proofreading;

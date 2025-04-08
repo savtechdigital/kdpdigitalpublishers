@@ -6,14 +6,14 @@ import Payment from "../payment/Payment";
 import Calendly from "../calendly/Calendly";
 import ImageSlider from "../imageslider/ImageSlider";
 
-const Ghostwriting = () => {
+const Formating = () => {
   return (
     <>
       <section
         className="relative min-h-screen bg-cover bg-center overflow-hidden py-16 md:py-24"
         style={{
           backgroundImage:
-            "url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744066685/Untitled_design_cuwfxh.jpg')",
+            "url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045853/bookpub-banner_z2gv0o.jpg')",
           backgroundColor: "rgba(0, 0, 0, 0.75)",
           backgroundBlendMode: "overlay",
           objectFit: "cover",
@@ -48,21 +48,16 @@ const Ghostwriting = () => {
                   className="absolute -left-4 top-0 bottom-0 w-1 bg-orange-500 rounded-full"
                 ></motion.div>
 
-                <h3 className="text-xl md:text-xl font-medium mb-4 pl-4">
-                  Do you have a story to tell?
+                <h3 className="text-md md:text-xl font-medium mb-4 pl-4">
+                  We Make Your Last Drafts Perfect
                 </h3>
                 <h1 className="text-2xl md:text-3xl font-bold mb-8 leading-tight">
-                  Your <span className="text-orange-400">Story,</span> Our
-                  Words, and the Rest Will Be History
+                  Get <span className="text-orange-400">Help</span> From the
+                  Best Formatting Service Today!
                 </h1>
                 <p className="text-md md:text-md mb-10 text-gray-200 leading-relaxed">
-                  At Kinetic Digital Publishers, every story matters. We’ve
-                  brought together a team of talented writers from around the
-                  world who know how to make your words come alive. No matter
-                  whether it’s through eBooks, memoirs, or business insights.
-                  From ghostwriters to seasoned authors, we’re here to help you
-                  shape stories that truly connect with your audience and leave
-                  a lasting impact.
+                  Our team of experts is all set to bring out the best format of
+                  your content
                 </p>
                 <div className="flex flex-wrap gap-6 mt-10">
                   <motion.button
@@ -123,7 +118,7 @@ const Ghostwriting = () => {
                     rotate: 2,
                     transition: { duration: 0.4 },
                   }}
-                  src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045717/5_dpzaks.png"
+                  src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744043444/15_rwsg7g.png"
                   loading="lazy"
                   alt="Book Journey to Bestsellerdom"
                   className="w-full max-h-[500px] object-contain"
@@ -175,9 +170,9 @@ const Ghostwriting = () => {
                     repeatType: "reverse",
                   }}
                 >
-                  W
+                  P
                 </motion.span>
-                hat is Ghostwriting?{" "}
+                rofessional Book Formatting for Print and Digital Publishing{" "}
               </motion.h2>
 
               <motion.p
@@ -186,35 +181,16 @@ const Ghostwriting = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-gray-700"
               >
-                Ghostwriting means writing in someone else's voice and bringing
-                their ideas and emotions to life. It can be any engaging
-                content, books, or any other form of writing. The ghost writes
-                on behalf of someone else in the name of the writer. It's like a
-                collaboration in which your ideas, voice, and vision take the
-                spotlight as a professional writer crafts them into beautiful
-                words.
-              </motion.p>
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-2xl md:text-2xl font-bold text-black mb-2"
-              >
-                How Ghostwriters Bring Your Vision to Life
-              </motion.h2>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-gray-700"
-              >
-                With the help of ghostwriting, your ideas will make perfect
-                content. A good ghostwriter has the expertise to turn your story
-                into a professional piece that feels authentically yours. From
-                research to revisions, they do it all. This way, you get the
-                free time to focus on other things. A ghostwriter will help you
-                write the content in such a manner that relates to your audience
-                and brings your ideas to life within a blink.
+                Since publishing is continuously changing, professional book
+                formatting cannot be looked over. Wanting to print your book or
+                having it in digital format will make the print on the page of
+                your book determine much about how the reader perceives the
+                book. Poor formatting can distract from your content, but proper
+                formatting will certainly make your book much more readable and
+                polished. Topics will include book formatting details, book
+                formatting services, the benefits of using book formatting
+                services, and best practices for print and digital formats in
+                blog postings.
               </motion.p>
 
               {/* Buttons */}
@@ -285,34 +261,32 @@ const Ghostwriting = () => {
               className="md:w-2/5"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Why Hire a Ghostwriter?
+                Comprehending Book Formatting:
               </h2>
 
               <p className="text-gray-700 mb-6">
-                Hiring a quality ghostwriter can play a major role in bringing
-                your ideas to life. Are you an aspiring novelist or someone who
-                wants to tell a story but never gets time to sit and write it
-                down? The ghost takes your ideas, voice, and vision and delivers
-                them as a complete package. A ghostwriter will definitely bring
-                knowledge and insight to your project. This is why a lot of
-                people go this route.
-              </p>
-              <p className="text-gray-700 mb-6">
-                The benefits of ghostwriting are:
+                Booking formatting is the process of arranging text and images
+                in a book to make it aesthetically pleasing and easy to read.
+                Proper spacing, font, style, sizes, margins, lines, spacing, and
+                page layouts are required for this. Although seeming relatively
+                simple, the subtleties of professional formatting can strongly
+                influence the success of your book.
               </p>
 
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Time-Saving Expertise:
+                  The Significance of Professional Formatting:
+                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Reader Experience:
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-orange-500 mr-2">•</span>
                     <span>
-                      {" "}
-                      Ghostwriters take care of research, writing, and editing.
-                      It leaves you with the time to indulge in what really
-                      interests you.
+                      A well-structured book is very pleasant and enjoyable to
+                      read. A book with a proper layout helps the reader
+                      understand and read it for a longer period of time.
                     </span>
                   </li>
                 </ul>
@@ -320,57 +294,32 @@ const Ghostwriting = () => {
 
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Professional Quality:{" "}
+                  Credibility:
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-orange-500 mr-2">•</span>
                     <span>
-                      A ghostwriter gets your story polished and presents it in
-                      such a way goes beyond the standards of the industry.
+                      Professional formatting brings an air of professional
+                      quality to your work. In a crowded marketplace, a properly
+                      formatted book will help set your title apart from
+                      self-published ones that appear messy.
                     </span>
                   </li>
                 </ul>
               </div>
               <div className="mb-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Customized Voice:{" "}
+                  Print v/s E-book:
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-orange-500 mr-2">•</span>
                     <span>
-                      They represent your unique tone and perspective to ensure
-                      the content feels as if you produced it.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Confidentiality Guaranteed:{" "}
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
-                    <span>
-                      You get the full credit of your work hile the
-                      confidentiality is maintained. This way, an author gets
-                      all the benefits of a ghostwriter.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Wide Range of Genres and Styles:{" "}
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="text-orange-500 mr-2">•</span>
-                    <span>
-                      Ghostwriters have their niches. They can write anything
-                      from business books to fictions.
+                      Different formats require different considerations. Print
+                      books require a standard dimension, whereas e-books have
+                      to be compatible with various e-readers. Knowledge of
+                      these differences is important for successful publishing.
                     </span>
                   </li>
                 </ul>
@@ -400,10 +349,9 @@ const Ghostwriting = () => {
                   rotate: 2,
                   transition: { duration: 0.4 },
                 }}
-                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045719/6_vux4cj.png"
+                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744043446/16_ooujog.png"
                 alt="Book Journey to Bestsellerdom"
-                className="w-full max-h-[500px] object-contain rounded-xl"
-                loading="lazy"
+                className="w-full max-h-[500px] object-contain"
               />
             </motion.div>
           </div>
@@ -435,44 +383,41 @@ const Ghostwriting = () => {
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-4xl font-bold mb-4 text-white"
             >
-              Tips for Selecting the Right Ghostwriter for Your Story{" "}
+              The Components of Professional Formatting:{" "}
             </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-white text-base md:text-md"
-            >
-              Here are some tips to help you make that perfect selection:
-            </motion.p>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Experience in Your Genre",
+                title: "Typography",
                 content:
-                  "When hiring a ghostwriter, find someone who knows your genre best. No matter whether it is fiction, memoir, business, or technical writing. Their knowledge of that genre will allow them to capture the essence of your story.",
+                  "Depending on what kind of text font is selected, this can be the make-it-or-break-it factor when trying to understand the text. For print, it is commonly preferred to use serifs, such as Times New Roman, but for digital format, a sans-serif, Arial, might work better. Be wary of how large your fonts and lines are. Body text in print would look nice at 10-12 points, 1.5 line spacing, but for digital formats, bring it down to 1.2.",
               },
               {
-                title: "Portfolio and Writing Style",
+                title: "Margins and Page Size",
                 content:
-                  "Check out their portfolio to see their writing style. Ensure that it is similar to the way you want to tell your story. This way, the audience can relate to your ideas.",
+                  "Margins ensure that your text is not cut off when printed. Most print books need inside margins to be larger for the binding. In digital formatting, you will want to make sure that your text looks good on a variety of screen sizes, from e-readers to tablets, etc.",
               },
               {
-                title: "Client Testimonials",
+                title: "Headings and Subheadings",
                 content:
-                  "Read the reviews regarding the work they did for previous clients. This way, you can see how they operate in terms of professionalism as well as the quality of writing.",
+                  "Headings and subheadings help the reader scheme through your book. For each level of heading you use, keep consistency in style, use all the levels of headings consistently, and consider adding visual elements, such as page breaks or ornaments that distinguish chapter transitions.",
               },
               {
-                title: "Collaborative Process",
+                title: "Images and Graphics",
                 content:
-                  "A good ghostwriter should be collaborative. They will listen to your comments and corrections rather than make you feel like you're spending hours trying to make someone understand how an already-written story must be changed.",
+                  "Images and graphics should be sufficiently high resolution for good prints and big enough for clear digital image uses. Ensure copyrights are obtained for images used. Add alt tags to the digital versions of these books to make them accessible.",
               },
               {
-                title: "Understand Your Vision",
+                title: "Page Numbers and Headers/Footers",
                 content:
-                  "Have a conversation to ensure that the ghostwriter has grasped the target goals as well as the message you'd like to get across. They should be able to capture the reflection of your vision & audience.",
+                  "Running heads and feet make longer works easier to navigate. Make sure they don't interfere with the flow of text when viewed on a device other than what was assumed.",
+              },
+              {
+                title: "Table of Contents",
+                content:
+                  "Of course, a well-designed table of contents goes on both print and digital books. With digital versions, you can even make it hyperlinked so that readers can click through to where the desired chapter really is.",
               },
             ].map((service, index) => (
               <motion.div
@@ -533,10 +478,17 @@ const Ghostwriting = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-             
-              <h2 className="text-3xl md:text-4xl font-bold mb-6  text-orange-500 ">
-                The Timeline Under a Professional Ghostwriter
+              <h2 className="text-3xl md:text-4xl font-bold mb-2  text-orange-500 ">
+                Book Formatting Services
               </h2>
+              <p className="text-gray-700 text-sm mb-1">
+                Although formatting your book might be possible by yourself,
+                many authors
+              </p>
+              <p className="text-gray-700 text-sm mb-2">
+                prefer to obtain the services of professional book formatting
+                services Why?
+              </p>
               <div className="w-[calc(100%-250px)] h-1 bg-orange-500 mx-auto mb-8"></div>
             </motion.div>
           </div>
@@ -550,7 +502,7 @@ const Ghostwriting = () => {
               className="order-2 md:order-1"
             >
               <img
-                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045720/8_di1jw0.png"
+                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744044418/17_srrp4y.png"
                 alt="Children reading a book"
                 className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
                 loading="lazy"
@@ -572,8 +524,8 @@ const Ghostwriting = () => {
                 className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-orange-500"
               >
                 <div className="flex items-start">
-                  <div className="bg-orange-500 text-white rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg
+                  <div className="bg-orange-500 text-white rounded-full p-2 mr-4 flex-shrink-0 w-[30px] h-[30px]">
+                    {/* <svg
                       className="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
@@ -586,17 +538,19 @@ const Ghostwriting = () => {
                         strokeWidth="2"
                         d="M6 18L18 6M6 6l12 12"
                       ></path>
-                    </svg>
+                    </svg> */}
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      First Consultation
+                      Expertise and Experience
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      The first step is in-depth conversation where you share
-                      the vision and purpose for your project. This is the stage
-                      where the ghostwriter understands your ideas and
-                      expectations.
+                      All these originate from the level of expertise and
+                      experience professionals enjoy in matters of enjoyment.
+                      They prevent common mistakes that quite often devil
+                      amateur formatting efforts. They stay updated with
+                      industry standards and work to tailor the format
+                      specifically to your genre and audience.
                     </p>
                   </div>
                 </div>
@@ -628,13 +582,12 @@ const Ghostwriting = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Planning and Outlining
+                      Saves Time
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      After understanding your objectives, they design a
-                      comprehensive outline for your project. This blueprint
-                      goes in the direction of the writing process to reinforce
-                      the vision in your head.
+                      This is especially true for any individual who is writing
+                      a very long work. This may take much time, which can be
+                      dedicated to other writing, marketing, or other work.
                     </p>
                   </div>
                 </div>
@@ -666,13 +619,49 @@ const Ghostwriting = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Writing and Drafting
+                      Quality Control
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      The ghostwriter gets down to crafting your story, keeping
-                      your tone, style, and key messages intact. This way,
-                      they're able to bring your ideas to life in the first
-                      draft of your manuscript or content.
+                      Professional book formatting services guarantee quality
+                      checks on your book, ensuring that it meets print and
+                      digital specifications. In some cases, they can provide
+                      proof to ensure everything looks right before you go live.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-orange-500"
+              >
+                <div className="flex items-start">
+                  <div className="bg-orange-500 text-white rounded-full p-2 mr-4 flex-shrink-0">
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                      Cross-platform compatibility
+                    </h3>
+                    <p className="text-gray-700 text-sm">
+                      If publishing in different formats for print and online
+                      media, professional formatters would ensure your book is
+                      formatted so that it will render all right on each
+                      platform and not cause compatibility problems.
                     </p>
                   </div>
                 </div>
@@ -702,10 +691,16 @@ const Ghostwriting = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              
-              <h2 className="text-3xl md:text-4xl font-bold mb-6  text-orange-500 ">
-                How to Choose the Perfect Ghostwriting Service
+              <h2 className="text-3xl md:text-4xl font-bold mb-2  text-orange-500 ">
+                Digital Book Formatting
               </h2>
+              <p className="text-gray-700 text-sm mb-1">
+                E-book formatting has its own share of problems and
+                opportunities.
+              </p>
+              <p className="text-gray-700 text-sm mb-2">
+                Here are just a few specific things to consider
+              </p>
               <div className="w-[calc(100%-250px)] h-1 bg-orange-500 mx-auto mb-8"></div>
             </motion.div>
           </div>
@@ -719,7 +714,7 @@ const Ghostwriting = () => {
               className="order-2 md:order-1"
             >
               <img
-                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045720/7_ncmpku.png"
+                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045714/18_ux3c7w.png"
                 alt="Children reading a book"
                 className="rounded-lg shadow-2xl w-full max-w-md mx-auto"
                 loading="lazy"
@@ -759,13 +754,13 @@ const Ghostwriting = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Check Their Area of Expertise:
+                      Compatibility with e-readers
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      A ghostwriter's portfolio and client reviews speaks
-                      volumes about their skills. Make sure that your writer has
-                      experience in your area of work. This way, you can ensure
-                      high-quality results.
+                      E-books are printed to be compatible with various
+                      E-readers and devices, such as Kindle, Nook, or tablets.
+                      Every type of platform has its own set of specifications,
+                      so your book must appear the same.
                     </p>
                   </div>
                 </div>
@@ -797,12 +792,13 @@ const Ghostwriting = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Price versus Value:
+                      Responsive Design
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      Ghostwriting fees depend on the details of a project, its
-                      duration, and the writer's level of experience. Although
-                      generally, top ghostwriters might be expensive.
+                      Digital formats can be responsive to screen sizes, while
+                      print cannot. Implement flexible layouts that make text
+                      and images respond to respective screen sizes, thus
+                      ensuring good readable readability on all devices used.
                     </p>
                   </div>
                 </div>
@@ -834,15 +830,14 @@ const Ghostwriting = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      Communication and Collaboration:
+                      Interactivity
                     </h3>
                     <p className="text-gray-700 text-sm">
-                      A good ghostwriter should be approachable, responsive, and
-                      open to collaboration. It's essential to have clear
-                      communication throughout the project to ensure your ideas
-                      and vision are accurately represented. A writer who
-                      listens and adapts to your feedback will deliver better
-                      results.
+                      An E-book can be interactive with hyperlinks, videos, or
+                      audio. This would make the book more attractive and
+                      interesting for the readers, but it also requires careful
+                      planning and formatting to prevent the malfunctioning of
+                      such features.
                     </p>
                   </div>
                 </div>
@@ -860,13 +855,18 @@ const Ghostwriting = () => {
               Conclusion
             </h3>
             <p className="text-gray-600 max-w-5xl text-sm mx-auto mb-8">
-              Telling your story should not be an issue if you're not a great
-              writer. With the help of a good ghostwriter, you would be able to
-              change all about it. If you are constantly searching for a
-              "ghostwriter near me" or a “ghostwriter in Dallas,” then your
-              search has brought you to the right place. Whether local or
-              worldwide, our experienced ghostwriters will serve your needs with
-              very well-tailored experiences.
+              Professional book formatting is an important step in the
+              publishing process and should not be taken lightly. When it comes
+              to self-publishing or even working through a traditional
+              publisher, good formatting on your part can only be justified by
+              the time and resources expended-they increase the chances of
+              getting noticed, make reading that much more accessible for your
+              readers, and that much more credible for you as the author.
+              Knowing the elements of formatting and the varying needs of print
+              and digital publishing will set up your book to succeed in any
+              market. A well-formatted book is not simply a matter of looks and
+              type; it's about creating an indelible impression on those
+              readers.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -904,6 +904,122 @@ const Ghostwriting = () => {
           </motion.div>
         </div>
       </motion.section>
+      {/* ////////////////////////////////////////////////////////// */}
+      {/* /////////////////////////////////////////////// */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.7 }}
+        className="py-16 md:py-24 bg-gray-50"
+      >
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl mx-auto">
+            {/* Left side - Image */}
+
+            {/* Right side - Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="md:w-2/5"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+                Best Practices for Book Formatting
+              </h2>
+
+              <div className="mb-8">
+               
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2">•</span>
+                    <span>
+                    <span className="text-md  font-bold text-gray-900 ">
+                  Familiarization with Genre-Specific Style Guides: {''}
+                </span>   
+                    Genre-specific and publisher-specific style guides provide very specific information regarding how to format the book, what font types are suitable, and sometimes conventions that need to be adopted.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mb-8">
+               
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2">•</span>
+                    <span>
+                    <span className="text-md font-bold text-gray-900 mb-4">
+                Test your formats: {''}
+                </span>
+                    It is always better to test your formatted book on multiple devices and platforms. Formatting errors may sometimes not appear visible on your own device.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mb-8">
+               
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2">•</span>
+                    <span>
+                    <span className="text-md font-bold text-gray-900 mb-4">
+                Investment in Professional services: {''}
+                </span>
+                    If the budget allows it, invest in hiring professionals to format it for you. You are now making that investment that could net you positive returns by enriching the quality and attractiveness of the book.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div className="mb-8">
+                
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-orange-500 mr-2">•</span>
+                    <span>
+                    <span className="text-md font-bold text-gray-900 mb-4">
+                Update :{''}
+                </span>
+                    The publishing world is continuously advancing from formatting to something else. Ensure you are updated on what is happening in the industry and new updates so your book does not fall behind others.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-wrap gap-4">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-6 py-3 bg-orange-500 text-white font-medium rounded-md hover:bg-orange-600 transition-all"
+                >
+                  Get A Quote
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-6 py-3 bg-white border border-orange-500 text-orange-500 font-medium rounded-md hover:bg-orange-50 transition-all"
+                >
+                  Live Chat
+                </motion.button>
+              </div>
+            </motion.div>
+            <motion.div>
+              <motion.img
+                whileHover={{
+                  scale: 1.05,
+                  rotate: 2,
+                  transition: { duration: 0.4 },
+                }}
+                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045715/19_erbgmo.png"
+                alt="Book Journey to Bestsellerdom"
+                className="w-full max-h-[500px] object-contain rounded-xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
+      {/* /////////////////////////////////////////////// */}
+
       {/* ///////////////////////////////////////////////////// */}
       <Calendly />
       <Payment />
@@ -911,4 +1027,4 @@ const Ghostwriting = () => {
   );
 };
 
-export default Ghostwriting;
+export default Formating;

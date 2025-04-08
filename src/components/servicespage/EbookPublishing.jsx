@@ -125,9 +125,10 @@ const EbookPublishing = () => {
                     rotate: 2,
                     transition: { duration: 0.4 },
                   }}
-                  src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744067206/3_e8anrd.png"
+                  src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045855/BookPublishing-blog_bdw5od.jpg"
                   alt="Book Journey to Bestsellerdom"
                   className="w-full max-h-[500px] object-contain"
+                  loading="lazy"
                 />
               </motion.div>
 
@@ -350,7 +351,8 @@ const EbookPublishing = () => {
                 }}
                 src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045713/2_yc0wii.png"
                 alt="Book Journey to Bestsellerdom"
-                className="w-full max-h-[500px] object-contain"
+                className="w-full max-h-[500px] object-contain rounded-xl"
+                loading="lazy"
               />
             </motion.div>
           </div>
@@ -380,32 +382,25 @@ const EbookPublishing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-4xl font-bold mb-4 text-white"
-            >
-              Kinetic Digital Publishers Premium Services
+            >What We Provide
+
             </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-white text-base md:text-md"
-            >
-              Kinetic Digital Publishers provides top-quality, custom-tailored solutions for all your Book Writing, Editing, Publishing, and Marketing needs.
-            </motion.p>
+           
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Book Publishing",
-                content: "From comprehensive editing, the copyright of your work, interior layout and design, creation of your book cover, ISBN, and listing of your published book with The Library of Congress — Kinetic Digital Publishers handles all of your publishing needs. Best of all, you retain 100% of your book rights and royalties. We take none."
+                title: "Professional editing:",
+                content: "The first step is refining your manuscript. Get yourself connected with professional editors who will give the finishing touch to your work. KDP provides expert editing services to ensure your work is flawless and professional."
               },
               {
-                title: "Book Writing",
-                content: "Be mentored by the Co Founder of Kinetic Digital Publishers, and the industry's leading book-writing coach, Marvin Mahoney. His proprietary writing method will guide you to complete your book from start to finish in 90 days or less. Certain restrictions apply, so contact us today to see if you qualify."
+                title: "Formatting services:",
+                content: "Your book’s cover is its first impression. We’ll help you create a stunning design that grabs attention and reflects your story. From typography to illustrations, every detail matters."
               },
               {
-                title: "Book Promotion",
-                content: "Our team of experts willsetup a strategic marketing campaign to ensure and guarantee your book becomes a #1 Bestseller on Amazon, NY Times, Wall Street Journal and USA Today. You'll achieve the new title of 'Bestselling Author' and receive the Amazon seal. Certain restrictions apply, so contact us today to see if you qualify."
+                title: "Proofreading",
+                content: "Formatting is the most important step before publishing. KDP's formatting team is well-trained to meet industry standards for both print and digital formats. This gives readers a professional and enjoyable experience."
               }
             ].map((service, index) => (
               <motion.div
