@@ -507,9 +507,9 @@ function Home() {
                 height="100%"
                 title="Author Podcast"
                 src="https://www.youtube.com/embed/Q6kwSLE6Zg4?si=p0x_KS1smxVn-BLg"
-                frameborder="0"
+                
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover border-none"
                 allowFullScreen
           
               ></iframe>

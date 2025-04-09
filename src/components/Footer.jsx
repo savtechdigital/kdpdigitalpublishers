@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-10  ">
+    <footer className="bg-gray-900 text-white py-4 ">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           
@@ -13,27 +13,26 @@ function Footer() {
               We produce books that influence the literary sphere and enhance your worth as an author. 
               Our collaboration ensures your goals are met with compelling results that resonate with your audience.
             </p>
+            <div className='flex gap-2 mt-2 '>
+            <img src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744230286/f-img1_pvr6ut.png" alt="" className='w-[100px] h-[100px] rounded-lg'/>
+            <img src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744230290/f-img2_o7g1vp.png" alt="" className='w-[100px] h-[100px] rounded-lg'/>
+
+            </div>
           </div>
 
           {/* Services */}
           <div>
             <h3 className="text-xl font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-gray-400 text-sm">
-              {[
-                "Ghost Writing",
-                "Editing & Proofreading",
-                "Book Cover Design",
-                "Video Trailer",
-                "Book Publishing Services",
-                "Book Marketing",
-                "Audio Book"
-              ].map((service, idx) => (
-                <li key={idx}>
-                  <Link to="/services" className="hover:text-white transition-colors">
-                    {service}
-                  </Link>
-                </li>
-              ))}
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li><Link to="/services/ghost-writing" className="hover:text-white">Ghost Writing</Link></li>
+              <li><Link to="/services/editing" className="hover:text-white">Editing & Proofreading</Link></li>
+              <li><Link to="/services/cover-design" className="hover:text-white">Book Cover Design</Link></li>
+              <li><Link to="/services/video-trailer" className="hover:text-white">Video Trailer</Link></li>
+              <li><Link to="/services/publishing" className="hover:text-white">Book Publishing Services</Link></li>
+              <li><Link to="/services/marketing" className="hover:text-white">Book Marketing</Link></li>
+              <li><Link to="/services/audio-book" className="hover:text-white">Audio Book</Link></li>
+            </ul>
             </ul>
           </div>
 
@@ -44,8 +43,8 @@ function Footer() {
               <li><Link to="/portfolio" className="hover:text-white">Portfolio</Link></li>
               <li><Link to="/about" className="hover:text-white">About Us</Link></li>
               <li><Link to="/contact" className="hover:text-white">Contact Us</Link></li>
-              <li><Link to="/terms" className="hover:text-white">Terms & Conditions</Link></li>
-              <li><Link to="/privacy" className="hover:text-white">Privacy Policy</Link></li>
+              <li><Link to="/terms-and-condition" className="hover:text-white">Terms & Conditions</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
             </ul>
           </div>
 

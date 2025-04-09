@@ -23,6 +23,10 @@ import Illustrations from './components/servicespage/Illustrations';
 import AuthorWebsite from './components/servicespage/AuthorWebsite';
 import VideoTrailer from './components/servicespage/VideoTrailer';
 
+import PrivacyPolicy from './components/privacy-policy/PrivacyPolicy';
+import TermsAndCondition from './components/terms&condition/TermsAndCondition';
+
+
 function App() {
   return (
     <LoadingProvider>
@@ -48,6 +52,8 @@ function App() {
             <Route path="/services/illustrations" element={<Illustrations />} />
             <Route path="/services/author-website" element={<AuthorWebsite />} />
             <Route path="/services/video-trailer" element={<VideoTrailer />} />
+            <Route path="/terms-and-condition" element={<TermsAndCondition />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </MainLayout>
