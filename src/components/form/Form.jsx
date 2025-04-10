@@ -3,9 +3,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
 
-// Step labels (removed Birth step)
+// Step labels
 const STEPS = ["Name", "Contact", "Submit"];
 const TOTAL_STEPS = STEPS.length;
 
@@ -32,7 +31,7 @@ const stepVariants = {
   lineInactive: { backgroundColor: "#fff" },
 };
 
-const FormComponent = () => {
+const FormComponent = ({ onClose }) => {
   const [currentStep, setCurrentStep] = useState(1);
 
   // Handle form submission
@@ -61,6 +60,7 @@ const FormComponent = () => {
 
       const result = await response.json();
       console.log("Form submitted successfully:", result);
+      if (onClose) onClose(); // Close the modal on successful submission
     } catch (error) {
       console.error("Error submitting form:", error);
     }
@@ -71,8 +71,37 @@ const FormComponent = () => {
       initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-white/75 p-4 sm:p-6 md:p-8 rounded-xl shadow-lg w-full max-w-md mx-auto"
+      className="bg-white/90 p-4 sm:p-6 md:p-8 rounded-xl shadow-lg w-full max-w-md mx-auto relative"
     >
+      {/* Close Icon */}
+      {onClose && (
+        <>
+          <button
+            onClick={onClose}
+            className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none"
+            aria-label="Close modal"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <div className="text-center text-sm font-bold mb-4 mt-4 text-orange-400">
+            New Opportunities Await! Explore Our Services Today!
+          </div>
+        </>
+      )}
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -161,7 +190,7 @@ const FormComponent = () => {
                   <ErrorMessage
                     name="email"
                     component="div"
-                    className="text-orange-500 text-xs  pt-1  pl-2"
+                    className="text-orange-500 text-xs pt-1 pl-2"
                   />
                   <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 mt-4">
                     Phone <span className="text-orange-500">*</span>
@@ -175,7 +204,7 @@ const FormComponent = () => {
                   <ErrorMessage
                     name="phone"
                     component="div"
-                    className="text-orange-500 text-xs  pt-1 pl-2"
+                    className="text-orange-500 text-xs pt-1 pl-2"
                   />
                 </div>
               )}
@@ -199,7 +228,7 @@ const FormComponent = () => {
                   <ErrorMessage
                     name="service"
                     component="div"
-                    className="text-orange-500 text-xs sm:text-sm  pt-1 pl-2"
+                    className="text-orange-500 text-xs sm:text-sm pt-1 pl-2"
                   />
                   <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 mt-4">
                     Upload File <span className="text-orange-500">*</span>
@@ -214,7 +243,7 @@ const FormComponent = () => {
                   <ErrorMessage
                     name="file"
                     component="div"
-                    className="text-orange-500 text-xs  pt-1 pl-2"
+                    className="text-orange-500 text-xs pt-1 pl-2"
                   />
                   <div className="flex items-start mt-4">
                     <input
@@ -228,12 +257,6 @@ const FormComponent = () => {
                       className="ml-3 block text-xs text-gray-700"
                     >
                       By checking the box, you agree to our{" "}
-                      {/* <Link
-                        to="/terms-and-condition"
-                        className="text-orange-500 font-medium hover:underline cursor-pointer"
-                      >
-                        Conditions of Use
-                      </Link> */}
                       <a
                         href="/terms-and-condition"
                         target="_blank"
@@ -249,7 +272,7 @@ const FormComponent = () => {
                 </div>
               )}
 
-              <div className="flex justify-between mt-4  sm:space-y-0 sm:space-x-2 ">
+              <div className="flex justify-between mt-4 sm:space-y-0 sm:space-x-2">
                 {currentStep > 1 && (
                   <button
                     type="button"

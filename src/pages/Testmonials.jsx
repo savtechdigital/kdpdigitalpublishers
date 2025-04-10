@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Slider from "../components/slider/slider";
 import Calendly from "../components/calendly/Calendly";
 import Payment from "../components/payment/Payment";
-import Banner from "../components/bannersections/banner";
+import Banner from "../components/bannersections/Banner";
 import { useState, useRef, useEffect } from 'react';
 
 const Testmonials = () => {

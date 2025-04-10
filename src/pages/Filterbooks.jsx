@@ -139,8 +139,8 @@ const bookData = {
   ],
 };
 
-const Filterbooks = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+const Filterbooks = ({defaultCategory = 'all'}) => {
+  const [activeCategory, setActiveCategory] = useState(defaultCategory);
   const [showGallery, setShowGallery] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Slider from "../components/slider/slider";
-import book from "../assets/images/3.webp";
+// import book from "../assets/images/3.webp";
 import Calendly from "../components/calendly/Calendly";
 import Payment from "../components/payment/Payment";
 
@@ -11,56 +11,56 @@ const teamMembers = [
     name: "Miles Wolf",
     role: "Chief of Author Strategy",
     description: "Led Strategy Planning for 500+ Projects",
-    image: "/src/assets/images/team/Miles.jpg"
+    image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309882/Miles_s14gjo.jpg"
   },
   {
     id: 2,
     name: "Marvin Mahoney",
     role: "Director of Author Strategy",
     description: "Accelerated Consistent Growth by Onboarding 1000+ Projects, Yearly",
-    image: "/src/assets/images/team/2.jpg"
+    image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309935/kayla_tbhydm.jpg"
   },
   {
     id: 3,
     name: "Kayla Francis",
     role: "Senior Ghostwriter",
     description: "Internationally Top-Rated Ghostwriter in the USA",
-    image: "/src/assets/images/team/kayla.jpg"
+    image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309935/kayla_tbhydm.jpg"
   },
   {
     id: 4,
     name: "Maya Richardson",
     role: "Editorial Director",
     description: "NYT Best-Seller. Former Editor at Harper Publishing",
-    image: "/src/assets/images/team/5.jpg"
+    image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309988/5_o9yfpl.jpg"
   },
   {
     id: 5,
     name: "Brianna Nicholas",
     role: "Executive Editor",
     description: "Worked on 300+ Projects, Successfully",
-    image: "/src/assets/images/team/6.jpg"
+    image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309989/6_giedfd.jpg"
   },
   {
     id: 6,
     name: "Hazel Carter",
     role: "Project Manager",
     description: "Managed 1000+ Projects",
-    image: "/src/assets/images/team/7.jpg"
+    image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309990/7_tt5ay0.jpg"
   },
   {
     id: 7,
     name: "Zayn Cole",
     role: "Sr. Project Manager",
     description: "Former Manager at Hachette",
-    image: "/src/assets/images/team/8.jpg"
+    image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309991/8_unmubo.jpg"
   },
   {
     id: 8,
     name: "Edda Smiles",
     role: "Publishing Consultant",
     description: "(Intern)",
-    image: "/src/assets/images/team/9.jpg"
+    image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309992/9_dwnaye.jpg"
   }
 ];
 
@@ -174,7 +174,7 @@ function About() {
               <motion.img
                 variants={childVariants}
                 whileHover={{ scale: 1.05, rotate: 2 }}
-                src={book}
+                src='https://res.cloudinary.com/dncqhipqk/image/upload/v1744045712/3_pqna0z.webp'
                 alt="Book Journey to Bestsellerdom"
                 className="w-full h-auto max-w-sm object-contain"
               />
@@ -186,7 +186,7 @@ function About() {
       <motion.section
         variants={childVariants}
         style={{
-          backgroundImage: `url('/src/assets/images/ai-4.jpg')`,
+          backgroundImage: `url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045734/ai-4_khyjrg.jpg')`,
         }}
         className="bg-white bg-no-repeat bg-cover bg-center py-10 px-4 lg:py-20 lg:px-20"
       >

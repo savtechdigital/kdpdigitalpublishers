@@ -71,7 +71,7 @@ const Calendly = () => {
     <>
       <section
         style={{
-          backgroundImage: `url('/src/assets/images/ai-1.jpg')`,
+          backgroundImage: `url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045725/ai-1_z8p5au.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

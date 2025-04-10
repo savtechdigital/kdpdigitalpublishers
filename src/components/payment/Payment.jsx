@@ -1,35 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
-import applepay from "../../assets/images/pay/1.png";
-import bancontact from "../../assets/images/pay/2.png";
-import card from "../../assets/images/pay/3.png";
-import eps from "../../assets/images/pay/4.png";
-import giropay from "../../assets/images/pay/5.png";
-import googlepay from "../../assets/images/pay/6.png";
-import ideal from "../../assets/images/pay/7.png";
-import klarna from "../../assets/images/pay/8.png";
-import link from "../../assets/images/pay/9.png";
-import sepa from "../../assets/images/pay/10.png";
-import stripe from "../../assets/images/pay/11.png";
-import transfer from "../../assets/images/pay/13.png";
-import trustpilot from "../../assets/images/review/trustpilot.png";
-import reviews from "../../assets/images/review/reviews.png";
-import goodfirms from "../../assets/images/review/goodfirms.png";
+// import applepay from "../../assets/images/pay/1.png";
+// import bancontact from "../../assets/images/pay/2.png";
+// import card from "../../assets/images/pay/3.png";
+// import eps from "../../assets/images/pay/4.png";
+// import giropay from "../../assets/images/pay/5.png";
+// import googlepay from "../../assets/images/pay/6.png";
+// import ideal from "../../assets/images/pay/7.png";
+// import klarna from "../../assets/images/pay/8.png";
+// import link from "../../assets/images/pay/9.png";
+// import sepa from "../../assets/images/pay/10.png";
+// import stripe from "../../assets/images/pay/11.png";
+// import transfer from "../../assets/images/pay/13.png";
+// import trustpilot from "../../assets/images/review/trustpilot.png";
+// import reviews from "../../assets/images/review/reviews.png";
+// import goodfirms from "../../assets/images/review/goodfirms.png";
 
 const Payment = () => {
   const paymentMethods = [
-    { id: 1, image: applepay, alt: "Apple Pay" },
-    { id: 2, image: stripe, alt: "Stripe" },
-    { id: 3, image: googlepay, alt: "Google Pay" },
-    { id: 4, image: link, alt: "Link" },
-    { id: 5, image: bancontact, alt: "Bancontact" },
-    { id: 6, image: eps, alt: "EPS" },
-    { id: 7, image: giropay, alt: "Giropay" },
-    { id: 8, image: ideal, alt: "iDEAL" },
-    { id: 9, image: transfer, alt: "Transfer" },
-    { id: 10, image: klarna, alt: "Klarna" },
-    { id: 11, image: card, alt: "Card" },
-    { id: 12, image: sepa, alt: "SEPA" },
+    { id: 1, image: 'https://res.cloudinary.com/dncqhipqk/image/upload/v1744308791/1_jkzdzq.png', alt: "Apple Pay" },
+    { id: 2, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308791/2_jvgdmn.png", alt: "Stripe" },
+    { id: 3, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308792/3_wb62b9.png", alt: "Google Pay" },
+    { id: 4, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308791/4_dw2cvu.png", alt: "Link" },
+    { id: 5, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308792/5_hjrlcc.png", alt: "Bancontact" },
+    { id: 6, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308792/6_v21qaf.png", alt: "EPS" },
+    { id: 7, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308792/7_zsx7b5.png", alt: "Giropay" },
+    { id: 8, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308792/8_k5omhz.png", alt: "iDEAL" },
+    { id: 9, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308791/11_owhtb8.png", alt: "Transfer" },
+    { id: 10, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308791/10_rm0qyo.png", alt: "Klarna" },
+    { id: 11, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308791/13_lc4wjb.png", alt: "Card" },
+    { id: 12, image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744308792/9_lbddjm.png", alt: "SEPA" },
   ];
 
   const containerVariants = {
@@ -129,14 +129,14 @@ const Payment = () => {
             <motion.img
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
-              src={reviews}
+              src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744309089/reviews_srpogz.png"
               alt="Reviews"
               className="h-12 w-auto"
             />
             <motion.img
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
-              src={goodfirms}
+              src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744309088/goodfirms_jnorlk.png"
               alt="GoodFirms"
               className="h-12 w-auto"
             />
@@ -160,7 +160,7 @@ const Payment = () => {
               <motion.img
                 whileHover={{ scale: 1.2 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                src={trustpilot}
+                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744309087/trustpilot_ftwt1x.png"
                 alt="Trustpilot"
                 className="h-5 w-auto"
               />

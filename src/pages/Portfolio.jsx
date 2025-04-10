@@ -3,7 +3,7 @@ import Slider from '../components/slider/slider';
 import Filterbooks from './Filterbooks';
 import Calendly from '../components/calendly/Calendly';
 import Payment from '../components/payment/Payment';
-import Banner from '../components/bannersections/banner';
+import Banner from '../components/bannersections/Banner';
 
 function Portfolio() {
   const containerVariants = {

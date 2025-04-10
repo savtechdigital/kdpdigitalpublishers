@@ -1,38 +1,31 @@
 import { motion } from 'framer-motion';
-import brand1 from '../../assets/images/slider/cl-1.png';
-import brand2 from '../../assets/images/slider/cl-2.png';
-import brand3 from "../../assets/images/slider/cl-3.png";
-import brand4 from "../../assets/images/slider/cl-4.png";
-import brand5 from "../../assets/images/slider/cl-5.png";
-import brand6 from "../../assets/images/slider/cl-6.png";  
-import brand7 from "../../assets/images/slider/cl-7.png";  
-import brand9 from "../../assets/images/slider/cl-9.png";  
-import brand10 from "../../assets/images/slider/cl-10.png";  
-import brand11 from "../../assets/images/slider/partner1.svg";  
-import brand12 from "../../assets/images/slider/partner2.svg";  
-import brand13 from "../../assets/images/slider/partner3.svg";  
-import brand14 from "../../assets/images/slider/partner4.svg";  
-import brand15 from "../../assets/images/slider/partner5.svg";  
-import brand16 from "../../assets/images/slider/partner6.svg";  
+// import brand1 from '../../assets/images/slider/cl-1.png';
+// import brand2 from '../../assets/images/slider/cl-2.png';
+// import brand3 from "../../assets/images/slider/cl-3.png";
+// import brand4 from "../../assets/images/slider/cl-4.png";
+// import brand5 from "../../assets/images/slider/cl-5.png";
+// import brand6 from "../../assets/images/slider/cl-6.png";  
+// import brand7 from "../../assets/images/slider/cl-7.png";  
+// import brand9 from "../../assets/images/slider/cl-9.png";  
+// import brand10 from "../../assets/images/slider/cl-10.png";  
+// import brand11 from "../../assets/images/slider/partner1.svg";  
+// import brand12 from "../../assets/images/slider/partner2.svg";  
+// import brand13 from "../../assets/images/slider/partner3.svg";  
+// import brand14 from "../../assets/images/slider/partner4.svg";  
+// import brand15 from "../../assets/images/slider/partner5.svg";  
+// import brand16 from "../../assets/images/slider/partner6.svg";  
 
 
 const Slider = () => {
     const brandLogos = [
-        // brand1,
-        // brand2,
-        // brand3,
-        // brand4,
-        // brand5,
-        // brand6,
-        // brand7,
-        // brand9,
-        // brand10,
-        brand11,
-        brand12,
-        brand13,
-        brand14,
-        brand15,
-        brand16,
+      
+       "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309448/partner1_ckbxp7.svg",
+       "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309450/partner4_f05pgc.svg",
+       "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309449/partner3_dpknis.svg",
+       "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309448/partner2_za8bjh.svg",
+       "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309448/partner5_i3xerf.svg",
+       "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309448/partner6_d58jef.svg"
+
       ];
       const logos = [...brandLogos, ...brandLogos]; 
 

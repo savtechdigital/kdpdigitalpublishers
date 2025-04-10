@@ -498,7 +498,7 @@ const Illustrations = () => {
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.8 }}
         style={{
-          backgroundImage: `url('/src/assets/images/ai-4.jpg')`,
+          backgroundImage: `url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045734/ai-4_khyjrg.jpg')`,
         }}
         className="bg-white bg-no-repeat bg-cover bg-center py-10 px-4 lg:py-20 lg:px-20"
       >

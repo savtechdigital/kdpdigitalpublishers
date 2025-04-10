@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/images/logo.png'
+// import logo from '../assets/images/logo.png'
 import ServicesDropdown from './ServicesDropdown';
 
 function Header() {
@@ -58,7 +58,7 @@ function Header() {
       <nav className="container mx-auto px-6 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="KDP Logo" className="h-12" />
+            <img src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744309767/logo2_v4rrcd.png" alt="KDP Logo" className="h-12" />
           </Link>
           
           {/* Desktop Menu */}

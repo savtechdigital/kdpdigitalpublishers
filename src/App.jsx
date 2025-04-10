@@ -25,12 +25,14 @@ import VideoTrailer from './components/servicespage/VideoTrailer';
 
 import PrivacyPolicy from './components/privacy-policy/PrivacyPolicy';
 import TermsAndCondition from './components/terms&condition/TermsAndCondition';
+import FormModal from './components/form/FormModL.JSX';
 
 
 function App() {
   return (
     <LoadingProvider>
       <Router>
+      <FormModal  />
         <ScrollToTop />
         <MainLayout>
           <Routes>

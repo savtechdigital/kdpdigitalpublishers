@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import Slider from "../components/slider/slider";
-import book from "../assets/images/3.webp";
+
 import Payment from "../components/payment/Payment";
-// import bilboardvedio from "../assets/images/videos/bilboard.mp4";
+
 import Filterbooks from './Filterbooks';
 import Calendly from "../components/calendly/Calendly";
 
@@ -32,14 +32,14 @@ function Home() {
               initial={{ y: 5 }}
               animate={{ y: 0 }}
               transition={{ duration: 0.4 }}
-              className="text-5xl font-bold mb-6">
+              className="text-5xl font-bold mb-6 text-orange-500">
               Get Published Within 48 Hours*
             </motion.h1>
             <motion.h2 
               initial={{ y: 5 }}
               animate={{ y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="text-3xl mb-8">
+              className="text-3xl mb-8 text-orange-500">
               Keep 100% Rights & Royalties
             </motion.h2>
           
@@ -54,7 +54,7 @@ function Home() {
               initial={{ opacity: 0.7 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-sm mt-4"
+              className="text-sm mt-4 "
             >
               *Certain Restrictions apply, including acceptance of Client manuscript and subject material.
             </motion.p>
@@ -137,7 +137,7 @@ function Home() {
               <motion.img
                 whileHover={{ scale: 1.05, rotate: 1 }}
                 transition={{ duration: 0.3 }}
-                src={book}
+                src='https://res.cloudinary.com/dncqhipqk/image/upload/v1744045712/3_pqna0z.webp'
                 alt="Book Journey to Bestsellerdom"
                 className="w-full h-auto max-w-sm object-contain"
               />
@@ -153,7 +153,7 @@ function Home() {
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.8 }}
         style={{
-          backgroundImage: `url('/src/assets/images/ai-4.jpg')`,
+          backgroundImage: `url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045734/ai-4_khyjrg.jpg')`,
         }}
         className="bg-white bg-no-repeat bg-cover bg-center py-10 px-4 lg:py-20 lg:px-20"
       >
@@ -255,7 +255,7 @@ function Home() {
                     rotate: 2,
                     transition: { duration: 0.4 }
                   }}
-                  src={book}
+                  src='https://res.cloudinary.com/dncqhipqk/image/upload/v1744045712/3_pqna0z.webp'
                   alt="Book Journey to Bestsellerdom"
                   className="w-full max-h-[500px] object-contain"
                 />
@@ -631,8 +631,8 @@ function Home() {
       </section>
 
       {/* bookfilter section */}
-        <Filterbooks />
-
+        <Filterbooks defaultCategory="fiction" />
+      
       {/* Calendly section */}
       <Calendly />
 
