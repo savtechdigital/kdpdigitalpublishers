@@ -1,15 +1,11 @@
 import { motion } from "framer-motion";
 import Slider from "../components/slider/slider";
-
 import Payment from "../components/payment/Payment";
-
-import Filterbooks from './Filterbooks';
+import Filterbooks from "./Filterbooks";
 import Calendly from "../components/calendly/Calendly";
-
+// import Expandable from "./Expandable";
 
 function Home() {
- 
-
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
@@ -27,27 +23,33 @@ function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-center">
-            <motion.h1 
+            className="text-center"
+          >
+            <motion.h1
               initial={{ y: 5 }}
               animate={{ y: 0 }}
               transition={{ duration: 0.4 }}
-              className="text-5xl font-bold mb-6 text-orange-500">
+              className="text-5xl font-bold mb-6 text-orange-500"
+            >
               Get Published Within 48 Hours*
             </motion.h1>
-            <motion.h2 
+            <motion.h2
               initial={{ y: 5 }}
               animate={{ y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="text-3xl mb-8 text-orange-500">
+              className="text-3xl mb-8 text-orange-500"
+            >
               Keep 100% Rights & Royalties
             </motion.h2>
-          
+
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(0,0,0,0.2)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 5px 15px rgba(0,0,0,0.2)",
+              }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
-              >
+            >
               APPLY NOW!
             </motion.button>
             <motion.p
@@ -56,41 +58,39 @@ function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-sm mt-4 "
             >
-              *Certain Restrictions apply, including acceptance of Client manuscript and subject material.
+              *Certain Restrictions apply, including acceptance of Client
+              manuscript and subject material.
             </motion.p>
           </motion.div>
         </div>
       </motion.section>
       {/* section slider */}
-     <Slider/>
+      <Slider />
       {/* section slider */}
 
       <motion.section
-        initial={{ opacity: 0.9}}
+        initial={{ opacity: 0.9 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="py-2 mt-4 mb-8"
       >
         <div className="container mx-auto px-4 pt-6 md:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center lg:px-10">
-            <motion.div 
+            <motion.div
               initial={{ x: -5 }}
               animate={{ x: 0 }}
               transition={{ duration: 0.5 }}
-              className="space-y-6 lg:col-span-[7] lg:pr-10">
-              <motion.h2 
-                className="text-2xl md:text-3xl font-bold text-black mb-4">
-            Your Book's Journey to Bestsellerdom Starts with Us!
+              className="space-y-6 lg:col-span-[7] lg:pr-10"
+            >
+              <motion.h2 className="text-2xl md:text-3xl font-bold text-black mb-4">
+                Your Book's Journey to Bestsellerdom Starts with Us!
               </motion.h2>
               {[
                 "Kinetic Digital Publishers is your all-in-one partner for book success. From crafting mind-capturing narratives to dominating bestseller lists, KDP offers a wide-ranging suite of services to turn your manuscript into a publishing world's sensation.",
                 "Our expert team provides incomparable book social media marketing, content optimization, web design and development, Amazon optimization, book publishing, and all other services that authors need to fly high. Our primary goal is to ensure that your story reaches the right readers.",
-                "Let team KDP be the catalyst for literary victory! Our services include;"
+                "Let team KDP be the catalyst for literary victory! Our services include;",
               ].map((text, index) => (
-                <p
-                  key={index}
-                  className="text-gray-700 text-sm lg:text-[15px]"
-                >
+                <p key={index} className="text-gray-700 text-sm lg:text-[15px]">
                   {text}
                 </p>
               ))}
@@ -99,24 +99,16 @@ function Home() {
                   "Book Ghostwriting Services",
                   "Editing and Formatting",
                   "Book Publishing Services",
-                  "Author Website Design"
+                  "Author Website Design",
                 ].map((service, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center text-gray-700"
-                  >
-                    <span
-                      className="w-2 h-2 bg-orange-500 rounded-full mr-2"
-                    ></span>
+                  <li key={index} className="flex items-center text-gray-700">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
                     {service}
                   </li>
                 ))}
               </div>
               <div className="flex gap-4 mt-6 flex-wrap">
-                {[
-                  "Get A Quote",
-                  "Live Chat"
-                ].map((btnText, index) => (
+                {["Get A Quote", "Live Chat"].map((btnText, index) => (
                   <motion.button
                     key={index}
                     whileHover={{ scale: 1.05 }}
@@ -129,15 +121,16 @@ function Home() {
               </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               initial={{ x: 5 }}
               animate={{ x: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative flex justify-center items-center lg:col-span-[5]">
+              className="relative flex justify-center items-center lg:col-span-[5]"
+            >
               <motion.img
                 whileHover={{ scale: 1.05, rotate: 1 }}
                 transition={{ duration: 0.3 }}
-                src='https://res.cloudinary.com/dncqhipqk/image/upload/v1744045712/3_pqna0z.webp'
+                src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045712/3_pqna0z.webp"
                 alt="Book Journey to Bestsellerdom"
                 className="w-full h-auto max-w-sm object-contain"
               />
@@ -178,7 +171,9 @@ function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-white text-base md:text-md"
             >
-              Kinetic Digital Publishers provides top-quality, custom-tailored solutions for all your Book Writing, Editing, Publishing, and Marketing needs.
+              Kinetic Digital Publishers provides top-quality, custom-tailored
+              solutions for all your Book Writing, Editing, Publishing, and
+              Marketing needs.
             </motion.p>
           </motion.div>
 
@@ -186,22 +181,28 @@ function Home() {
             {[
               {
                 title: "Book Publishing",
-                content: "From comprehensive editing, the copyright of your work, interior layout and design, creation of your book cover, ISBN, and listing of your published book with The Library of Congress — Kinetic Digital Publishers handles all of your publishing needs. Best of all, you retain 100% of your book rights and royalties. We take none."
+                content:
+                  "From comprehensive editing, the copyright of your work, interior layout and design, creation of your book cover, ISBN, and listing of your published book with The Library of Congress — Kinetic Digital Publishers handles all of your publishing needs. Best of all, you retain 100% of your book rights and royalties. We take none.",
               },
               {
                 title: "Book Writing",
-                content: "Be mentored by the Co Founder of Kinetic Digital Publishers, and the industry's leading book-writing coach, Marvin Mahoney. His proprietary writing method will guide you to complete your book from start to finish in 90 days or less. Certain restrictions apply, so contact us today to see if you qualify."
+                content:
+                  "Be mentored by the Co Founder of Kinetic Digital Publishers, and the industry's leading book-writing coach, Marvin Mahoney. His proprietary writing method will guide you to complete your book from start to finish in 90 days or less. Certain restrictions apply, so contact us today to see if you qualify.",
               },
               {
                 title: "Book Promotion",
-                content: "Our team of experts willsetup a strategic marketing campaign to ensure and guarantee your book becomes a #1 Bestseller on Amazon, NY Times, Wall Street Journal and USA Today. You'll achieve the new title of 'Bestselling Author' and receive the Amazon seal. Certain restrictions apply, so contact us today to see if you qualify."
-              }
+                content:
+                  "Our team of experts willsetup a strategic marketing campaign to ensure and guarantee your book becomes a #1 Bestseller on Amazon, NY Times, Wall Street Journal and USA Today. You'll achieve the new title of 'Bestselling Author' and receive the Amazon seal. Certain restrictions apply, so contact us today to see if you qualify.",
+              },
             ].map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ y: -10, boxShadow: "0px 10px 20px rgba(0,0,0,0.2)" }}
+                whileHover={{
+                  y: -10,
+                  boxShadow: "0px 10px 20px rgba(0,0,0,0.2)",
+                }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-white rounded-lg shadow-lg p-6 transition-all"
               >
@@ -228,7 +229,7 @@ function Home() {
       </motion.section>
 
       {/* new sections */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.2 }}
@@ -238,62 +239,79 @@ function Home() {
         <div className="container mx-auto md:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Image Section */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50, rotateY: 15 }}
               whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
-              transition={{ 
-                duration: 0.8, 
-                type: "spring", 
-                stiffness: 100 
+              transition={{
+                duration: 0.8,
+                type: "spring",
+                stiffness: 100,
               }}
               className="relative w-full h-full flex justify-center"
             >
-              <motion.div  >
+              <motion.div>
                 <motion.img
-                  whileHover={{ 
-                    scale: 1.05, 
+                  whileHover={{
+                    scale: 1.05,
                     rotate: 2,
-                    transition: { duration: 0.4 }
+                    transition: { duration: 0.4 },
                   }}
-                  src='https://res.cloudinary.com/dncqhipqk/image/upload/v1744045712/3_pqna0z.webp'
+                  src="https://res.cloudinary.com/dncqhipqk/image/upload/v1744045712/3_pqna0z.webp"
                   alt="Book Journey to Bestsellerdom"
                   className="w-full max-h-[500px] object-contain"
                 />
-               
               </motion.div>
-              
+
               <motion.div
                 initial={{ scale: 0, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.7 }}
                 className="absolute -bottom-4 -right-4 bg-orange-500 text-white p-3 md:p-4 rounded-full shadow-lg"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
                 </svg>
               </motion.div>
             </motion.div>
 
             {/* Text Section */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, type: "spring" }}
               className="space-y-6"
             >
-              <motion.h2 
+              <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 className="text-3xl md:text-4xl font-bold text-black mb-4"
               >
-                <motion.span 
+                <motion.span
                   initial={{ color: "#000" }}
                   animate={{ color: "#f97316" }}
-                  transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
-                >W</motion.span>hat is KDP?
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                  }}
+                >
+                  W
+                </motion.span>
+                hat is KDP?
               </motion.h2>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
@@ -302,9 +320,12 @@ function Home() {
                 <motion.span
                   initial={{ fontWeight: "normal" }}
                   whileHover={{ fontWeight: "bold" }}
-                >Kinetic Digital Publishers</motion.span>—Your Story, Amplified!
+                >
+                  Kinetic Digital Publishers
+                </motion.span>
+                —Your Story, Amplified!
               </motion.p>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -316,7 +337,7 @@ function Home() {
                 Kinetic Digital Publishers, the team focuses on the power of
                 words to transform the lives of underrated authors.
               </motion.p>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -327,7 +348,7 @@ function Home() {
                 manuscript, design covers that attract, and market your book to
                 the world.
               </motion.p>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
@@ -340,17 +361,17 @@ function Home() {
               </motion.p>
 
               {/* Buttons */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="flex gap-4 mt-6 flex-wrap"
               >
-                <motion.button 
-                  whileHover={{ 
-                    scale: 1.08, 
+                <motion.button
+                  whileHover={{
+                    scale: 1.08,
                     boxShadow: "0px 5px 15px rgba(0,0,0,0.3)",
-                    backgroundColor: "#ea580c"
+                    backgroundColor: "#ea580c",
                   }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ scale: 0.95, opacity: 0 }}
@@ -360,11 +381,11 @@ function Home() {
                 >
                   Get A Quote
                 </motion.button>
-                <motion.button 
-                  whileHover={{ 
-                    scale: 1.08, 
+                <motion.button
+                  whileHover={{
+                    scale: 1.08,
                     boxShadow: "0px 5px 15px rgba(0,0,0,0.3)",
-                    backgroundColor: "#ea580c"
+                    backgroundColor: "#ea580c",
                   }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ scale: 0.95, opacity: 0 }}
@@ -393,7 +414,9 @@ function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
-        style={{ backgroundImage: `url('/src/assets/images/pl1-video-sec.jpg')` }}
+        style={{
+          backgroundImage: `url('/src/assets/images/pl1-video-sec.jpg')`,
+        }}
         className="relative py-16 lg:px-20 sm:py-20 bg-cover bg-center bg-no-repeat"
       >
         {/* Background Overlay */}
@@ -411,7 +434,7 @@ function Home() {
             >
               <video
                 className="w-full h-full object-cover rounded-2xl"
-                src='https://res.cloudinary.com/dncqhipqk/video/upload/v1744043204/bilboard_peiuxm.mp4'
+                src="https://res.cloudinary.com/dncqhipqk/video/upload/v1744043204/bilboard_peiuxm.mp4"
                 autoPlay
                 muted
                 loop
@@ -502,18 +525,15 @@ function Home() {
               transition={{ duration: 0.6 }}
               className="aspect-video w-full rounded-2xl overflow-hidden shadow-xl"
             >
-               <iframe
+              <iframe
                 width="100%"
                 height="100%"
                 title="Author Podcast"
                 src="https://www.youtube.com/embed/Q6kwSLE6Zg4?si=p0x_KS1smxVn-BLg"
-                
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 className="w-full h-full object-cover border-none"
                 allowFullScreen
-          
               ></iframe>
-             
             </motion.div>
 
             {/* Content Section */}
@@ -575,7 +595,7 @@ function Home() {
       </section>
 
       {/* Unlock Your Next Chapter  */}
-      <section 
+      <section
         style={{
           backgroundImage: `url('src/assets/images/cta-bg.png')`,
         }}
@@ -609,10 +629,12 @@ function Home() {
                 Unlock Your Next Chapter of Success with KDP!
               </h2>
               <p className="text-sm md:text-base text-gray-200 mb-6">
-                Get Ready to work with a highly-trained team of experts—a team that will bring your words to life, and take it to the top of the world, too!
+                Get Ready to work with a highly-trained team of experts—a team
+                that will bring your words to life, and take it to the top of
+                the world, too!
               </p>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-                <a 
+                <a
                   href="tel:+18552490007"
                   className="inline-block px-6 py-2.5 bg-orange-500 text-white text-sm font-medium rounded-full hover:bg-orange-600 transition-colors"
                 >
@@ -624,15 +646,15 @@ function Home() {
                 <button className="px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-900 transition-colors border border-white">
                   Get A Quote
                 </button>
-            </div>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* bookfilter section */}
-        <Filterbooks defaultCategory="fiction" />
-      
+      <Filterbooks defaultCategory="fiction" />
+
       {/* Calendly section */}
       <Calendly />
 
@@ -640,6 +662,5 @@ function Home() {
     </div>
   );
 }
-
 
 export default Home;

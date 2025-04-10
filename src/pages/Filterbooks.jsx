@@ -46,7 +46,6 @@ const bookData = {
       name: "Cook Books",
       books: [
         { id: 15, src: "src/assets/images/cook/1.webp", title: "Culinary Delights" },
-        // { id: 8, src: "/assets/images/cook/2.jpg", title: "Tasty Recipes" },
       ],
     },
     {
@@ -254,14 +253,14 @@ const Filterbooks = ({defaultCategory = 'all'}) => {
                   alt={book.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t  to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+                {/* <div className="absolute inset-0 bg-gradient-to-t  to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
                   <div className="text-white text-center p-3">
                     <h3 className="text-base md:text-lg font-bold mb-2">{book.title}</h3>
                     <button className="px-3 py-1.5 bg-orange-500 rounded-full text-xs md:text-sm hover:bg-orange-600 transition-colors">
                       View Details
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           ))}
