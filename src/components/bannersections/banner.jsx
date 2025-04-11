@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { useModal } from '../../context/ModalContext';
 
 const Banner = () => {
+  const { openModal } = useModal();
     return (
       <>
          <section
@@ -50,7 +52,9 @@ const Banner = () => {
                 <button className="px-6 py-2.5 bg-white text-gray-900 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
                   Live Chat
                 </button>
-                <button className="px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-900 transition-colors border border-white">
+                <button 
+                onClick={() => openModal("apply-now-button")}
+                className="px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-900 transition-colors border border-white">
                   Get A Quote
                 </button>
               </div>

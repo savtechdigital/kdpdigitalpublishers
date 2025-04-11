@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
+import { useModal } from "../../context/ModalContext";
 
 const Calendly = () => {
+  const { openModal } = useModal();
   const [isLoading, setIsLoading] = useState(true);
   const calendlyRef = useRef(null);
 
@@ -147,7 +149,7 @@ const Calendly = () => {
               <button className="px-8 py-3 bg-white text-gray-900 rounded-full hover:bg-gray-100 transition-colors text-sm md:text-base font-medium">
                 Live Chat
               </button>
-              <button className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-900 transition-colors text-sm md:text-base font-medium border border-white">
+              <button onClick={() => openModal("apply-now-button")} className="px-8 py-3 bg-black text-white rounded-full hover:bg-gray-900 transition-colors text-sm md:text-base font-medium border border-white">
                 Get A Quote
               </button>
             </motion.div>

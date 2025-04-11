@@ -3,9 +3,12 @@ import Slider from "../components/slider/slider";
 import Payment from "../components/payment/Payment";
 import Filterbooks from "./Filterbooks";
 import Calendly from "../components/calendly/Calendly";
+import { useModal } from "../context/ModalContext";
+import { Link } from "react-router-dom";
 // import Expandable from "./Expandable";
 
 function Home() {
+  const { openModal } = useModal();
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
@@ -48,6 +51,7 @@ function Home() {
                 boxShadow: "0px 5px 15px rgba(0,0,0,0.2)",
               }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => openModal("apply-now-button")}
               className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
             >
               APPLY NOW!
@@ -108,16 +112,21 @@ function Home() {
                 ))}
               </div>
               <div className="flex gap-4 mt-6 flex-wrap">
-                {["Get A Quote", "Live Chat"].map((btnText, index) => (
-                  <motion.button
-                    key={index}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
-                  >
-                    {btnText}
-                  </motion.button>
-                ))}
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => openModal("apply-now-button")}
+                  className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
+                >
+                  Get A Quote
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
+                >
+                  Live Chat
+                </motion.button>
               </div>
             </motion.div>
 
@@ -377,6 +386,7 @@ function Home() {
                   initial={{ scale: 0.95, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.6 }}
+                  onClick={() => openModal("apply-now-button")}
                   className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
                 >
                   Get A Quote
@@ -479,9 +489,11 @@ function Home() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-6"
               >
-                <button className="px-6 sm:px-8 py-3 bg-black text-white rounded-full hover:bg-gray-900 transition-colors">
+                <Link to="/contact">
+                <button  className="px-6 sm:px-8 py-3 bg-black text-white rounded-full hover:bg-gray-900 transition-colors">
                   Contact Us
                 </button>
+                </Link>
                 <button className="px-6 sm:px-8 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors">
                   Live Chat
                 </button>
@@ -643,7 +655,7 @@ function Home() {
                 <button className="px-6 py-2.5 bg-white text-gray-900 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
                   Live Chat
                 </button>
-                <button className="px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-900 transition-colors border border-white">
+                <button onClick={() => openModal("apply-now-button")} className="px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-900 transition-colors border border-white">
                   Get A Quote
                 </button>
               </div>

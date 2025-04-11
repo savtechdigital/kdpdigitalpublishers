@@ -65,6 +65,7 @@ const teamMembers = [
 ];
 
 function About() {
+  const { openModal } = useModal();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -293,6 +294,7 @@ function About() {
                   variants={childVariants}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => openModal("apply-now-button")}
                   className="px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-900 transition-colors border border-white"
                 >
                   Get A Quote

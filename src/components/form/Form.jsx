@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-// Step labels
+// Step labels and validation schemas (unchanged)
 const STEPS = ["Name", "Contact", "Submit"];
 const TOTAL_STEPS = STEPS.length;
 
-// Validation schemas for each step
 const validationSchemas = [
   Yup.object({
     name: Yup.string().required("Name is required"),
@@ -23,7 +22,7 @@ const validationSchemas = [
   }),
 ];
 
-// Animation variants for the step indicator
+// Animation variants for the step indicator (unchanged)
 const stepVariants = {
   active: { scale: 1.2, backgroundColor: "#F97316", color: "#fff" },
   inactive: { scale: 1, backgroundColor: "#e5e7eb", color: "#000" },
@@ -171,7 +170,7 @@ const FormComponent = ({ onClose }) => {
                   <ErrorMessage
                     name="name"
                     component="div"
-                    className="text-orange-500  text-xs pt-1 pl-2"
+                    className="text-orange-500 text-xs pt-1 pl-2"
                   />
                 </div>
               )}

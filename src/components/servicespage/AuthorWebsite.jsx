@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
 import Slider from "../slider/slider";
 import Form from "../form/Form";
-import Banner from "../bannersections/banner";
+import Banner from "../bannersections/Banner";
 import Payment from "../payment/Payment";
 import Calendly from "../calendly/Calendly";
 import ImageSlider from "../imageslider/ImageSlider";
 import { useState } from "react";
+import { useModal } from "../../context/ModalContext";
 
 
 const AuthorWebsite = () => {
   const [selectedTrend, setSelectedTrend] = useState(0);
+  const { openModal } = useModal();
   return (
     <>
       <section
@@ -70,6 +72,7 @@ const AuthorWebsite = () => {
                       boxShadow: "0px 5px 15px rgba(255,165,0,0.4)",
                     }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => openModal("apply-now-button")}
                     className="px-4 py-2 bg-transparent border-2 border-white text-white text-lg font-semibold hover:bg-white hover:text-black transition-all rounded-lg"
                   >
                     Get A Quote
@@ -260,6 +263,7 @@ const AuthorWebsite = () => {
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.6 }}
                   className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
+                  onClick={() => openModal("apply-now-button")}
                 >
                   Get A Quote
                 </motion.button>
@@ -343,6 +347,7 @@ const AuthorWebsite = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => openModal("apply-now-button")}
                   className="px-6 py-3 bg-orange-500 text-white font-medium rounded-md hover:bg-orange-600 transition-all"
                 >
                   Get A Quote
@@ -574,6 +579,7 @@ const AuthorWebsite = () => {
                   initial={{ scale: 0.95, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.6 }}
+                  onClick={() => openModal("apply-now-button")}
                   className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
                 >
                   Get A Quote
@@ -658,6 +664,7 @@ const AuthorWebsite = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-6 py-3 bg-orange-500 text-white font-medium rounded-md hover:bg-orange-600 transition-all"
+                  onClick={() => openModal("apply-now-button")}
                 >
                   Get A Quote
                 </motion.button>

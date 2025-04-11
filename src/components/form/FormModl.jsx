@@ -1,10 +1,11 @@
 // src/components/form/FormModal.jsx
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import FormComponent from "./Form";
+import { useModal } from "../../context/ModalContext";
 
-// Modal animation variants
+// Modal animation variants (unchanged)
 const modalVariants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
@@ -18,27 +19,27 @@ const backdropVariants = {
 };
 
 const FormModal = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isModalOpen, openModal, closeModal, hasBeenShown } = useModal();
   const location = useLocation();
 
-  // Auto-open modal on home route after 5 seconds
+  // Auto-open modal on home route after 5 seconds (only if not already shown)
   useEffect(() => {
-    if (location.pathname === "/") {
+    if (
+      location.pathname === "/" &&
+      !isModalOpen &&
+      !hasBeenShown // Only trigger if modal hasn't been shown
+    ) {
       const timer = setTimeout(() => {
-        setIsOpen(true);
+        openModal("homepage-timer");
       }, 5000); // 5 seconds delay
 
       return () => clearTimeout(timer); // Cleanup timer on unmount
     }
-  }, [location.pathname]);
-
-  const handleClose = () => {
-    setIsOpen(false);
-  };
+  }, [location.pathname, isModalOpen, hasBeenShown, openModal]);
 
   return (
     <AnimatePresence>
-      {isOpen && (
+      {isModalOpen && (
         <motion.div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
           variants={backdropVariants}
@@ -46,7 +47,6 @@ const FormModal = () => {
           animate="visible"
           exit="exit"
         >
-        
           <motion.div
             className="relative w-full max-w-md mx-4"
             variants={modalVariants}
@@ -54,8 +54,7 @@ const FormModal = () => {
             animate="visible"
             exit="exit"
           >
-           
-            <FormComponent onClose={handleClose} />
+            <FormComponent onClose={closeModal} />
           </motion.div>
         </motion.div>
       )}

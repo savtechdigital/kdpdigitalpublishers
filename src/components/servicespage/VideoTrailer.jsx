@@ -3,8 +3,9 @@ import Form from "../form/Form";
 import Slider from "../slider/slider";
 import VideoSection from "./VideoSection";
 import { VideoProvider } from "../../context/VideoContext";
-
+import { useModal } from "../../context/ModalContext";
 const VideoTrailer = () => {
+  const { openModal } = useModal();
   const videoSections = [
     {
       title: "The Habitchual Liar",
@@ -182,6 +183,7 @@ const VideoTrailer = () => {
                       boxShadow: "0px 5px 15px rgba(255,165,0,0.4)",
                     }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => openModal("apply-now-button")}
                     className="px-4 py-2 bg-transparent border-2 border-white text-white text-lg font-semibold hover:bg-white hover:text-black transition-all rounded-lg"
                   >
                     Get A Quote
