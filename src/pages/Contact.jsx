@@ -38,7 +38,7 @@ const Contact = () => {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 1.2 }}
         style={{
-          backgroundImage: `url('/src/assets/images/testimonials.png')`,
+          backgroundImage: `url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744386876/contact-us_fjlfdk.png')`,
         }}
         className="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50 bg-no-repeat bg-cover bg-center"
       >

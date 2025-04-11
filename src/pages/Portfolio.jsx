@@ -36,7 +36,7 @@ function Portfolio() {
       <motion.section
         variants={childVariants}
         style={{
-          backgroundImage: `url('/src/assets/images/testimonials.png')`,
+          backgroundImage: `url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744389809/portfolio_qptzlk.png')`,
         }}
         className="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50 bg-no-repeat bg-cover bg-center"
       >

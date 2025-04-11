@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { useModal } from '../../context/ModalContext';
+import { useLiveChatContext } from '../Chat/LiveChat';
 
 const Banner = () => {
+  const { toggleLiveChat, isLiveChatOpen } = useLiveChatContext();
   const { openModal } = useModal();
     return (
       <>
@@ -49,8 +51,10 @@ const Banner = () => {
                 >
                   Call Us +1 (855) 249-0007
                 </a>
-                <button className="px-6 py-2.5 bg-white text-gray-900 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
-                  Live Chat
+                <button
+                onClick={toggleLiveChat}
+                className="px-6 py-2.5 bg-white text-gray-900 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
+                 {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
                 </button>
                 <button 
                 onClick={() => openModal("apply-now-button")}

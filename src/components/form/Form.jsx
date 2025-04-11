@@ -10,16 +10,19 @@ const TOTAL_STEPS = STEPS.length;
 
 const validationSchemas = [
   Yup.object({
-    name: Yup.string().min(3, "Name must be at least 3 characters").max(30, "Name must be less than 30 characters").required("Name is required"),
+    name: Yup.string()
+      .min(3, "Name must be at least 3 characters")
+      .max(30, "Name must be less than 30 characters")
+      .required("Name is required"),
   }),
   Yup.object({
     email: Yup.string().email("Invalid email").required("Email is required"),
     phone: Yup.string()
-  .matches(
-    /^(?:\+?\d{1,3}[-. ]?)?(?:0|\d{1,4})[-. ]?\d{1,4}[-. ]?\d{1,4}[-. ]?\d{1,9}$/, 
-    "Phone number (e.g., 01234567890)"
-  )
-  .required("Phone number is required"),
+      .matches(
+        /^(?:\+?\d{1,3}[-. ]?)?(?:0|\d{1,4})[-. ]?\d{1,4}[-. ]?\d{1,4}[-. ]?\d{1,9}$/,
+        "Phone number (e.g., 01234567890)"
+      )
+      .required("Phone number is required"),
   }),
   Yup.object({
     service: Yup.string().required("Service is required"),
@@ -45,13 +48,18 @@ const FormComponent = ({ onClose }) => {
     formDataToSend.append("email", values.email);
     formDataToSend.append("phone", values.phone);
     formDataToSend.append("service", values.service);
-    // if (values.file) {
-    //   formDataToSend.append("file", values.file);
-    // }
+    formDataToSend.append("brief", values.service); // Use service as brief since brief is not in the form
+    formDataToSend.append("news", "1"); // Default value as per PHP script
+    formDataToSend.append("route", ""); // Default empty value
+    formDataToSend.append("brand", ""); // Default empty value
+    formDataToSend.append("tag", ""); // Default empty value
+    formDataToSend.append("price", ""); // Default empty value
+    formDataToSend.append("manuscript", values.file); // Match PHP script's expected field name
+    formDataToSend.append("token", window.sessionToken || "your-session-token"); // Replace with actual session token
 
     try {
       const response = await fetch(
-        "http://localhost:3000/services/publishing",
+        "https://www.kdpdigitalpublishers.com/submit-form.php",
         {
           method: "POST",
           body: formDataToSend,
@@ -59,14 +67,19 @@ const FormComponent = ({ onClose }) => {
       );
 
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        if (response.status === 404) {
+          throw new Error("PHP script not found. Please check the URL.");
+        }
+        throw new Error(`Network response was not ok: ${response.statusText}`);
       }
 
-      const result = await response.json();
-      console.log("Form submitted successfully:", result);
+      // Since the PHP script redirects, we won't get a JSON response
+      // The browser will follow the redirect to /thank-you/
+      console.log("Form submitted successfully");
       if (onClose) onClose(); // Close the modal on successful submission
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert(error.message);
     }
   };
 
@@ -153,13 +166,13 @@ const FormComponent = ({ onClose }) => {
           onSubmit={(values, { setSubmitting }) => {
             if (currentStep < TOTAL_STEPS) {
               setCurrentStep(currentStep + 1);
+              setSubmitting(false);
             } else {
-              handleSubmit(values);
+              handleSubmit(values).finally(() => setSubmitting(false));
             }
-            setSubmitting(false);
           }}
         >
-          {({ setFieldValue }) => (
+          {({ setFieldValue, isSubmitting }) => (
             <Form className="space-y-4">
               {currentStep === 1 && (
                 <div>
@@ -202,7 +215,7 @@ const FormComponent = ({ onClose }) => {
                   <Field
                     type="tel"
                     name="phone"
-                    placeholder="Your phone number"
+                    placeholder="Your phone number (e.g., +01234567890)"
                     className="w-full px-3 py-2 border border-gray-300 outline-none rounded-lg focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-all text-sm"
                   />
                   <ErrorMessage
@@ -235,10 +248,11 @@ const FormComponent = ({ onClose }) => {
                     className="text-orange-500 text-xs sm:text-sm pt-1 pl-2"
                   />
                   <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 mt-4">
-                  Submitting your manuscript accelerates process. 
+                    Submitting your manuscript accelerates the process.
                   </label>
                   <input
                     type="file"
+                    name="file"
                     accept=".pdf, .doc, .docx, .txt"
                     onChange={(event) => {
                       setFieldValue("file", event.currentTarget.files[0]);
@@ -289,9 +303,14 @@ const FormComponent = ({ onClose }) => {
                 )}
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="bg-orange-500 text-white px-4 py-2 rounded-lg w-[100px] sm:w-auto text-sm"
                 >
-                  {currentStep < TOTAL_STEPS ? "Next" : "Submit"}
+                  {isSubmitting
+                    ? "Submitting..."
+                    : currentStep < TOTAL_STEPS
+                    ? "Next"
+                    : "Submit"}
                 </button>
               </div>
             </Form>

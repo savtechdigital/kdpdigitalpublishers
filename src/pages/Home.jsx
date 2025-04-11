@@ -5,9 +5,11 @@ import Filterbooks from "./Filterbooks";
 import Calendly from "../components/calendly/Calendly";
 import { useModal } from "../context/ModalContext";
 import { Link } from "react-router-dom";
+import  { useLiveChatContext } from "../components/Chat/LiveChat";
 // import Expandable from "./Expandable";
 
 function Home() {
+  const { toggleLiveChat, isLiveChatOpen } = useLiveChatContext();
   const { openModal } = useModal();
   return (
     <div className="min-h-screen ">
@@ -17,9 +19,9 @@ function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         style={{
-          backgroundImage: `url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045732/ai-3_fcgdct.jpg')`,
+          backgroundImage: `url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744386117/pl1-portfolio_qfqcyj.jpg')`,
         }}
-        className="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50 bg-no-repeat bg-cover bg-center"
+        className=" bg-gradient-to-r from-blue-50 to-indigo-50 bg-no-repeat bg-cover bg-center h-screen py-52 md:py-52  "
       >
         <div className="container mx-auto px-4 text-white">
           <motion.div
@@ -32,7 +34,7 @@ function Home() {
               initial={{ y: 5 }}
               animate={{ y: 0 }}
               transition={{ duration: 0.4 }}
-              className="text-5xl font-bold mb-6 text-orange-500"
+              className="text-2xl md:text-5xl font-bold mb-6 text-orange-400 "
             >
               Get Published Within 48 Hours*
             </motion.h1>
@@ -40,7 +42,7 @@ function Home() {
               initial={{ y: 5 }}
               animate={{ y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="text-3xl mb-8 text-orange-500"
+              className="text-3xl mb-8 text-orange-400"
             >
               Keep 100% Rights & Royalties
             </motion.h2>
@@ -60,18 +62,19 @@ function Home() {
               initial={{ opacity: 0.7 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-sm mt-4 "
+              className="text-sm mt-4 text-gray-300"
             >
               *Certain Restrictions apply, including acceptance of Client
               manuscript and subject material.
             </motion.p>
+            
           </motion.div>
         </div>
       </motion.section>
       {/* section slider */}
       <Slider />
       {/* section slider */}
-
+               
       <motion.section
         initial={{ opacity: 0.9 }}
         animate={{ opacity: 1 }}
@@ -123,9 +126,11 @@ function Home() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={toggleLiveChat}
                   className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
                 >
-                  Live Chat
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
+                  
                 </motion.button>
               </div>
             </motion.div>
@@ -401,9 +406,11 @@ function Home() {
                   initial={{ scale: 0.95, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.7 }}
+                  onClick={toggleLiveChat}
                   className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
                 >
-                  Live Chat
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
+                  
                 </motion.button>
               </motion.div>
 
@@ -494,8 +501,8 @@ function Home() {
                   Contact Us
                 </button>
                 </Link>
-                <button className="px-6 sm:px-8 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors">
-                  Live Chat
+                <button onClick={toggleLiveChat}   className="px-6 sm:px-8 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors">
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
                 </button>
               </motion.div>
             </div>
@@ -652,8 +659,8 @@ function Home() {
                 >
                   Call Us +1 (855) 249-0007
                 </a>
-                <button className="px-6 py-2.5 bg-white text-gray-900 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
-                  Live Chat
+                <button onClick={toggleLiveChat}  className="px-6 py-2.5 bg-white text-gray-900 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors">
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
                 </button>
                 <button onClick={() => openModal("apply-now-button")} className="px-6 py-2.5 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-900 transition-colors border border-white">
                   Get A Quote

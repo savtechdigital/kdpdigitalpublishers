@@ -7,15 +7,17 @@ import Calendly from "../calendly/Calendly";
 import ImageSlider from "../imageslider/ImageSlider";
 import { useState } from "react";
 import { useModal } from "../../context/ModalContext";
+import { useLiveChatContext } from "../Chat/LiveChat";
 
 
 const AuthorWebsite = () => {
   const [selectedTrend, setSelectedTrend] = useState(0);
   const { openModal } = useModal();
+  const { toggleLiveChat, isLiveChatOpen } = useLiveChatContext();
   return (
     <>
       <section
-        className="relative min-h-screen bg-cover bg-center overflow-hidden py-16 md:py-24"
+        className="relative min-h-screen bg-cover bg-center overflow-hidden py-24 md:py-36 md:px-16"
         style={{
           backgroundImage:
             "url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045853/bookpub-banner_z2gv0o.jpg')",
@@ -31,7 +33,7 @@ const AuthorWebsite = () => {
 
         {/* Main content container with extra padding */}
         <div className="container mx-auto px-6 md:px-12 relative z-20">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-24 max-w-7xl mx-auto">
             {/* Left side - Text content with reduced width */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -53,12 +55,12 @@ const AuthorWebsite = () => {
                   className="absolute -left-4 top-0 bottom-0 w-1 bg-orange-500 rounded-full"
                 ></motion.div>
 
-                <h1 className="text-2xl md:text-3xl font-bold mb-8 leading-tight">
+                <h1 className="text-2xl md:text-3xl font-bold  mb-2  md:mb-8 leading-tight">
                   Build Your
                   <span className="text-orange-400">Author Brand</span> with a
                   Professional Author Website
                 </h1>
-                <p className="text-md md:text-md mb-10 text-gray-200 leading-relaxed">
+                <p className="text-sm text-justify md:text-md mb-10 text-gray-200 leading-relaxed">
                   An author's website is no longer optional in an increasingly
                   digital world. A very effective author website is your
                   branding tool, portfolio, and direct line to readers. A
@@ -83,6 +85,7 @@ const AuthorWebsite = () => {
                       boxShadow: "0px 5px 15px rgba(255,165,0,0.4)",
                     }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={toggleLiveChat}
                     className="px-4 py-2 bg-orange-500 text-white text-lg font-semibold hover:bg-orange-600 transition-all rounded-lg"
                   >
                     Get Started
@@ -277,9 +280,10 @@ const AuthorWebsite = () => {
                   initial={{ scale: 0.95, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.7 }}
+                  onClick={toggleLiveChat}
                   className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
                 >
-                  Live Chat
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
                 </motion.button>
               </motion.div>
 
@@ -355,9 +359,10 @@ const AuthorWebsite = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={toggleLiveChat}
                   className="px-6 py-3 bg-white border border-orange-500 text-orange-500 font-medium rounded-md hover:bg-orange-50 transition-all"
                 >
-                  Live Chat
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}   
                 </motion.button>
               </div>
             </motion.div>
@@ -596,7 +601,7 @@ const AuthorWebsite = () => {
                   transition={{ duration: 0.4, delay: 0.7 }}
                   className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
                 >
-                  Live Chat
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
                 </motion.button>
               </motion.div>
 
@@ -673,7 +678,7 @@ const AuthorWebsite = () => {
                   whileTap={{ scale: 0.95 }}
                   className="px-6 py-3 bg-white border border-orange-500 text-orange-500 font-medium rounded-md hover:bg-orange-50 transition-all"
                 >
-                  Live Chat
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}     
                 </motion.button>
               </div>
             </motion.div>
@@ -1009,10 +1014,11 @@ const AuthorWebsite = () => {
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95 }}  
+                onClick={toggleLiveChat}
                 className="px-6 py-3 bg-white border border-gray-300 text-gray-700 font-semibold rounded-md hover:bg-gray-50 transition-all"
               >
-                Live Chat
+                {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}

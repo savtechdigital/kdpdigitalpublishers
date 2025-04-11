@@ -4,6 +4,7 @@ import Slider from "../components/slider/slider";
 import Calendly from "../components/calendly/Calendly";
 import Payment from "../components/payment/Payment";
 import { useModal } from "../context/ModalContext";
+import { useLiveChatContext } from "../components/Chat/LiveChat";
 
 // Team Members Data
 const teamMembers = [
@@ -19,7 +20,7 @@ const teamMembers = [
     name: "Marvin Mahoney",
     role: "Director of Author Strategy",
     description: "Accelerated Consistent Growth by Onboarding 1000+ Projects, Yearly",
-    image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309935/kayla_tbhydm.jpg"
+    image: "https://res.cloudinary.com/dncqhipqk/image/upload/v1744309920/2_y1lfqr.jpg"
   },
   {
     id: 3,
@@ -67,6 +68,7 @@ const teamMembers = [
 
 function About() {
   const { openModal } = useModal();
+  const { toggleLiveChat, isLiveChatOpen } = useLiveChatContext();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -109,7 +111,7 @@ function About() {
       <motion.section
         variants={childVariants}
         style={{
-          backgroundImage: `url('/src/assets/images/testimonials.png')`,
+          backgroundImage: `url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045722/about-us_jyik61.png')`,
         }}
         className="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-indigo-50 bg-no-repeat bg-cover bg-center"
       >
@@ -225,7 +227,7 @@ function About() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </motion.div>
                 <motion.h3
@@ -287,9 +289,10 @@ function About() {
                   variants={childVariants}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={toggleLiveChat}
                   className="px-6 py-2.5 bg-white text-gray-900 text-sm font-medium rounded-full hover:bg-gray-100 transition-colors"
                 >
-                  Live Chat
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
                 </motion.button>
                 <motion.button 
                   variants={childVariants}

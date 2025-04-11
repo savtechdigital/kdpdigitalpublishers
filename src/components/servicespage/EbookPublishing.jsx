@@ -11,13 +11,15 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
+import { useLiveChatContext } from "../Chat/LiveChat";
 
   const EbookPublishing = () => {
   const { openModal } = useModal();
+  const { toggleLiveChat, isLiveChatOpen } = useLiveChatContext();
   return (
     <>
       <section
-        className="relative min-h-screen bg-cover bg-center overflow-hidden py-16 md:py-24"
+        className="relative min-h-screen bg-cover bg-center overflow-hidden py-24  md:py-44 md:px-16"
         style={{
           backgroundImage:
             "url('https://res.cloudinary.com/dncqhipqk/image/upload/v1744045715/222_bekzik.jpg')",
@@ -33,7 +35,7 @@ import 'swiper/css/effect-coverflow';
 
         {/* Main content container with extra padding */}
         <div className="container mx-auto px-6 md:px-12 relative z-20">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-24 max-w-7xl mx-auto">
             {/* Left side - Text content with reduced width */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -55,15 +57,15 @@ import 'swiper/css/effect-coverflow';
                   className="absolute -left-4 top-0 bottom-0 w-1 bg-orange-500 rounded-full"
                 ></motion.div>
 
-                <h3 className="text-xl md:text-xl font-medium mb-4 pl-4">
+                <h3 className="text-md md:text-xl font-medium mb-2 ">
                   E-Book Publishing Made Simple
                 </h3>
 
-                <h1 className="text-2xl md:text-3xl font-bold mb-8 leading-tight">
+                <h1 className="text-2xl md:text-3xl font-bold  mb-2  md:mb-8 leading-tight">
                   E-Book <span className="text-orange-400">Publishing</span>
                   Service Provider In USA!
                 </h1>
-                <p className="text-md md:text-md mb-10 text-gray-200 leading-relaxed">
+                <p className="text-sm text-justify md:text-md mb-10 text-gray-200 leading-relaxed">
                   Your story deserves nothing less than recognition. We're here
                   to help turn it into a bestseller every step of the way.
                 </p>
@@ -85,6 +87,7 @@ import 'swiper/css/effect-coverflow';
                       boxShadow: "0px 5px 15px rgba(255,165,0,0.4)",
                     }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={toggleLiveChat}
                     className="px-4 py-2 bg-orange-500 text-white text-lg font-semibold hover:bg-orange-600 transition-all rounded-lg"
                   >
                     Get Started
@@ -243,9 +246,10 @@ import 'swiper/css/effect-coverflow';
                   initial={{ scale: 0.95, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.7 }}
+                  onClick={toggleLiveChat}
                   className="px-6 py-3 bg-orange-500 text-white rounded hover:bg-orange-600 transition-all"
                 >
-                  Live Chat
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
                 </motion.button>
               </motion.div>
 
@@ -340,10 +344,11 @@ import 'swiper/css/effect-coverflow';
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileTap={{ scale: 0.95 }}  
+                  onClick={toggleLiveChat}
                   className="px-6 py-3 bg-white border border-orange-500 text-orange-500 font-medium rounded-md hover:bg-orange-50 transition-all"
                 >
-                  Live Chat
+                  {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
                 </motion.button>
               </div>
             </motion.div>
@@ -731,13 +736,15 @@ import 'swiper/css/effect-coverflow';
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(107, 114, 128, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
+                onClick={toggleLiveChat}
                 className="px-8 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all"
               >
-                Live Chat
+                {isLiveChatOpen ? 'Close Chat' : 'Live Chat'}
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(249, 115, 22, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => openModal("apply-now-button")}
                 className="px-8 py-3 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-all"
               >
                 Get A Quote

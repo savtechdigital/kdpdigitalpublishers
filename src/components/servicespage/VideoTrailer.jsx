@@ -4,8 +4,10 @@ import Slider from "../slider/slider";
 import VideoSection from "./VideoSection";
 import { VideoProvider } from "../../context/VideoContext";
 import { useModal } from "../../context/ModalContext";
+import { useLiveChatContext } from "../Chat/LiveChat";
 const VideoTrailer = () => {
   const { openModal } = useModal();
+  const { toggleLiveChat, isLiveChatOpen } = useLiveChatContext();
   const videoSections = [
     {
       title: "The Habitchual Liar",
@@ -114,7 +116,7 @@ const VideoTrailer = () => {
 
   return (
     <VideoProvider>
-      <section className="relative min-h-screen bg-cover bg-center overflow-hidden py-16 md:py-24">
+      <section className="relative min-h-screen bg-cover bg-center overflow-hidden py-24 md:py-36 md:px-16">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
           <video
@@ -139,7 +141,7 @@ const VideoTrailer = () => {
 
         {/* Main content container with extra padding */}
         <div className="container mx-auto px-6 md:px-12 relative z-20">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-24 max-w-7xl mx-auto">
             {/* Left side - Text content with reduced width */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -160,16 +162,16 @@ const VideoTrailer = () => {
                   transition={{ delay: 0.7, duration: 0.8 }}
                   className="absolute -left-4 top-0 bottom-0 w-1 bg-orange-500 rounded-full"
                 ></motion.div>
-                <h1 className="text-xl  font-bold mb-4 leading-tight">
+                <h1 className="text-md md:text-xl font-bold mb-2 leading-tight">
                   Video Trailer
                 </h1>
 
-                <h1 className="text-2xl md:text-3xl font-bold mb-8 leading-tight">
+                <h1 className="text-2xl md:text-3xl font-bold  mb-2  md:mb-8 leading-tight">
                   Book a {""}
                   <span className="text-orange-400">Session</span> {""}
                   with Our Strategic Consulting Team
                 </h1>
-                <p className="text-md md:text-md mb-10 text-gray-200 leading-relaxed">
+                <p className="text-sm text-justify md:text-md mb-10 text-gray-200 leading-relaxed">
                   Creating hype, making readers curious, and introducing the
                   plot of the book has now proved to create a positive impact on
                   minds prior to the release date. Instagram reels, Facebook
@@ -194,6 +196,7 @@ const VideoTrailer = () => {
                       boxShadow: "0px 5px 15px rgba(255,165,0,0.4)",
                     }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={toggleLiveChat}
                     className="px-4 py-2 bg-orange-500 text-white text-lg font-semibold hover:bg-orange-600 transition-all rounded-lg"
                   >
                     Get Started
