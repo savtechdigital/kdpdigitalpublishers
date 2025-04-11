@@ -3,6 +3,7 @@ import Slider from "../components/slider/slider";
 // import book from "../assets/images/3.webp";
 import Calendly from "../components/calendly/Calendly";
 import Payment from "../components/payment/Payment";
+import { useModal } from "../context/ModalContext";
 
 // Team Members Data
 const teamMembers = [
