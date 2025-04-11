@@ -48,7 +48,7 @@ const FormComponent = ({ onClose }) => {
     formDataToSend.append("email", values.email);
     formDataToSend.append("phone", values.phone);
     formDataToSend.append("service", values.service);
-    formDataToSend.append("brief", values.service); // Use service as brief since brief is not in the form
+    formDataToSend.append("brief", ""); // Use service as brief since brief is not in the form
     formDataToSend.append("news", "1"); // Default value as per PHP script
     formDataToSend.append("route", ""); // Default empty value
     formDataToSend.append("brand", ""); // Default empty value
