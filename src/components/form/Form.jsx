@@ -10,15 +10,20 @@ const TOTAL_STEPS = STEPS.length;
 
 const validationSchemas = [
   Yup.object({
-    name: Yup.string().required("Name is required"),
+    name: Yup.string().min(3, "Name must be at least 3 characters").max(30, "Name must be less than 30 characters").required("Name is required"),
   }),
   Yup.object({
     email: Yup.string().email("Invalid email").required("Email is required"),
-    phone: Yup.string().required("Phone number is required"),
+    phone: Yup.string()
+  .matches(
+    /^(?:\+?\d{1,3}[-. ]?)?(?:0|\d{1,4})[-. ]?\d{1,4}[-. ]?\d{1,4}[-. ]?\d{1,9}$/, 
+    "Phone number (e.g., 01234567890)"
+  )
+  .required("Phone number is required"),
   }),
   Yup.object({
     service: Yup.string().required("Service is required"),
-    file: Yup.mixed().required("File is required"),
+    
   }),
 ];
 
@@ -40,9 +45,9 @@ const FormComponent = ({ onClose }) => {
     formDataToSend.append("email", values.email);
     formDataToSend.append("phone", values.phone);
     formDataToSend.append("service", values.service);
-    if (values.file) {
-      formDataToSend.append("file", values.file);
-    }
+    // if (values.file) {
+    //   formDataToSend.append("file", values.file);
+    // }
 
     try {
       const response = await fetch(
@@ -230,10 +235,11 @@ const FormComponent = ({ onClose }) => {
                     className="text-orange-500 text-xs sm:text-sm pt-1 pl-2"
                   />
                   <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 mt-4">
-                    Upload File <span className="text-orange-500">*</span>
+                  Submitting your manuscript accelerates process. 
                   </label>
                   <input
                     type="file"
+                    accept=".pdf, .doc, .docx, .txt"
                     onChange={(event) => {
                       setFieldValue("file", event.currentTarget.files[0]);
                     }}
